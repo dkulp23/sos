@@ -13,3 +13,5 @@ The Site is used for Seattle city only.
 ##Wire Frames
 ##User Stories
 ##Project Management strategy and tools
+Waffle for issues
+Slack for Instant Messaging.
