@@ -6,10 +6,10 @@ The app offers homeless and other disadvantaged folks a centralized resource for
 ##Scope of the app
 The Site is used for Seattle city only.
 ##Feature list
-*Bullet list
-Food
-Shelter
-Health*
+
+-Food
+-Shelter
+-Health
 ##Wire Frames
 ##User Stories
 ##Project Management strategy and tools
