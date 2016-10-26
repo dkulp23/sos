@@ -10,6 +10,11 @@ The Site is used for Seattle city only.
 -Food
 -Shelter
 -Health
+##Content
+page 1: sexy splash page.
+page 2: header, list, back button, maybe map, social media.
+with gender/age inputs.
+page 3 (reservations page): input name, contact info, date, time.
 ##Wire Frames
 ##User Stories
 ##Project Management strategy and tools
