@@ -1,3 +1,7 @@
+.button {
+  border: 5px solid black;
+}
+
 #food {
   background: url('burgershake.png');
   border: 2px solid black;
