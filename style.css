@@ -1,3 +1,13 @@
+td {
+  min-width: 200px;
+  min-height: 200px;
+}
+
+tr {
+  min-height: 200px;
+}
+
+
 .button {
   border: 5px solid black;
   width: 150px;
@@ -11,3 +21,44 @@
 #food2 {
   padding: 5px;
 }
+
+#circleWrapper {
+    position:absolute;
+    width:500px;
+    height:500px;
+}
+
+/*#food
+{
+   right:50%;
+}
+
+#food2
+{
+    top:30%;
+    right:10%;
+}*/
+
+/*#img3
+{
+    top:30%;
+    left:10%;
+}
+
+#img4
+{
+    top:60%;
+    right:10%;
+}
+
+#img5
+{
+    top:60%;
+    left:10%
+}
+
+#img6
+{
+    top:90%;
+    right:50%;
+}​*/
