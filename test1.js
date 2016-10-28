@@ -10,9 +10,13 @@ var Location = function(obj) {
   this.restrictions = obj.restrictions;
   allLocations.push(this);
 };
+
 function instantiateLocations() {
   for(var i = 0; i < breakfastLocationData.length; i++) {
     new Location(breakfastLocationData[i]);
   }
 }
+
+
+
 instantiateLocations();
