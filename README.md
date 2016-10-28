@@ -11,7 +11,7 @@ The Site is used for Seattle city only.
 -Shelter
 -Health
 ##Content
-page 1: sexy splash page.
+page 1: splash page.
 page 2: header, list, back button, maybe map, social media.
 with gender/age inputs.
 page 3 (reservations page): input name, contact info, date, time.
