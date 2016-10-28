@@ -1,13 +1,14 @@
 'use strict';
 var allLocations = [ ];
 
-var Location = function(name, hood, address, phone, days, times, restrictions) {
+//Object constructor for locations
+var Location = function(obj) {
   this.name = name;
   this.hood = hood;
   this.address = address;
-  this.phone = phone;
   this.daysOpen = days;
-  this.timesOpen = times;
+  this.openTime = openTime;
+  this.closeTime = closeTime;
   this.restrictions = restrictions;
-
-}
+  allLocations.push(this);
+};
