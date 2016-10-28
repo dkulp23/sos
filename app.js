@@ -22,3 +22,27 @@ function instantiateLocations() {
 }
 
 instantiateLocations();
+
+function makeAnElementWithText(element, textContent, parent) {
+  var childEl = document.createElement(element);
+  childEl.textContent = textContent;
+  parent.appendChild(childEl);
+};
+
+function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
+  var tableEl = document.getElementById(idName);
+  var rowEl = document.createElement(rowElement);
+  makeAnElementWithText(El, tC1, rowEl);
+  makeAnElementWithText(El, tC2, rowEl);
+  makeAnElementWithText(El, tC3, rowEl);
+  makeAnElementWithText(El, tC4, rowEl);
+  tableEl.appendChild(rowEl);
+};
+
+function populateTable() {
+  for (var i = 0; i < allLocations.length; i++) {
+    createRow('foodLocations', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions);
+  }
+};
+
+populateTable();
