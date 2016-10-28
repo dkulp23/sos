@@ -1,3 +1,11 @@
+*{
+  margin:0px auto;
+}
+
+html, body {
+  text-align:center;
+}
+
 td {
   min-width: 200px;
   min-height: 200px;
@@ -5,13 +13,13 @@ td {
 
 tr {
   min-height: 200px;
+  /*opacity: 0.5;*/
 }
-
 
 .button {
   border: 5px solid black;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 #food {
@@ -22,43 +30,11 @@ tr {
   padding: 5px;
 }
 
-#circleWrapper {
-    position:absolute;
-    width:500px;
-    height:500px;
+#circleTable {
+  background: url('assets/lifepreserver/lifepreserver2.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  /*opacity: 0.5;*/
+  /*width:500px;
+  height:500px;
 }
-
-/*#food
-{
-   right:50%;
-}
-
-#food2
-{
-    top:30%;
-    right:10%;
-}*/
-
-/*#img3
-{
-    top:30%;
-    left:10%;
-}
-
-#img4
-{
-    top:60%;
-    right:10%;
-}
-
-#img5
-{
-    top:60%;
-    left:10%
-}
-
-#img6
-{
-    top:90%;
-    right:50%;
-}​*/
