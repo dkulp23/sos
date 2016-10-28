@@ -16,6 +16,8 @@ var Location = function(obj) {
 function instantiateLocations() {
   for(var i = 0; i < breakfastLocationData.length; i++) {
     new Location(breakfastLocationData[i]);
+    new Location(lunchLocationData[i]);
+    new Location(dinnerLocationData[i]);
   }
 }
 
