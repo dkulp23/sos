@@ -40,6 +40,13 @@ function makeAnElementWithText(element, textContent, parent) {
   parent.appendChild(childEl);
 };
 
+function setClassOfAddressCells(element, textContent, parent) {
+  var childEl = document.createElement(element);
+  childEl.setAttribute('class', 'address');
+  childEl.textContent = textContent;
+  parent.appendChild(childEl);
+};
+
 //helper function to create reservation button
 function makeAReservationButton(idName, parent) {
   var buttonEl = document.createElement('button');
@@ -54,7 +61,7 @@ function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
   var rowEl = document.createElement(rowElement);
   makeAnElementWithText(El, tC1, rowEl);
   makeAnElementWithText(El, tC2, rowEl);
-  makeAnElementWithText(El, tC3, rowEl);
+  setClassOfAddressCells(El, tC3, rowEl);
   makeAnElementWithText(El, tC4, rowEl);
   makeAReservationButton(tC1, rowEl);
   tableEl.appendChild(rowEl);
