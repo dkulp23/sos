@@ -5,5 +5,34 @@
 }
 
 #food {
-  
+
+}
+#foodLocations td,th{
+border: 1px solid black;
+padding: 0.3em;
+background-color: #99ff99;
+font-size: 16px;
+}
+h3{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 500%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+cite{
+  text-align: center;
+  color:red;
+  animation: blinker 1s linear infinite;
+}
+@-webkit-keyframes blinker {
+  50% { opacity: 0; }
 }
