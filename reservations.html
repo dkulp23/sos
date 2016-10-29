@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="reservations.css">
+    <title>Make a Reservation!</title>
+
+    <h1 id="title">Make a Reservation!</h1>
+  </head>
+
+  <body>
+
+    <form action="reservations.js" method="post">
+      <fieldset>
+        <h3><label for="name">Name: </label><input type="text" name="name" id="name" class="input inputText" required> *</h3>
+        <h3><label for="age">Age: </label><input type="number" name="age" id="age" min="1" class="input inputText" required> *</h3>
+        <h3>Gender: *</h3><input type="radio" name="gender" id="gender" value="male" id="male" class="radio"><label for="male"> Male</label><br>
+                        <input type="radio" name="gender" value="female" id="female"><label for="female"> Female</label><br>
+                        <input type="radio" name="gender" value="other" id="other"><label for="other"> Other </label><input type="text" name="othergender" class="input inputText"><br>
+        <h3><label for="phone">Phone: </label></label><input type="text" name="phone" id="phone" class="input inputText"></h3> &nbsp;-AND/OR-
+        <h3><label for="email">Email: </label><input type="text" name="email" id="email" class="input inputText"></h3>
+        <h3><label for="date">Date of stay: </label><input type="date" name="date" id="date" class="input"> *</h3>
+        <h3><label for="party">How many people? </label><input type="number" name="party" id="party" min="1" class="input"> *</h3>
+        <h3>Pets? *</h3> <input type="radio" name="pets" id="pets" value="yes" class="radio"> Yes<br>
+                        <input type="radio" name="pets" value-"no"> No<br>
+        <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h3><textarea name="notes" rows="5" cols="50" id="notes" class="input"></textarea><br><br>
+        <input type="submit" value="Submit">
+      </fieldset>
+
+
+
+    </form>
+
+  </body>
+
+</html>
