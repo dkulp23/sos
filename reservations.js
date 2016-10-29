@@ -1,1 +1,16 @@
-//TODO if required fields are empty when submit button is clicked, show text in textbox in red
+
+
+function formValidation() {
+  document.getElementById(formSubmit).addEventListener('click', requiredInput);
+}
+
+function requiredInput() {
+  var form = document.getElementById(resForm);
+  var nameInput = document.getElementById(nom);
+  if (nameInput.name === '') {
+    nameInput.setAttribute('placeholder', 'Please fill out this field.');
+    return false;
+  }
+}
+
+formValidation();

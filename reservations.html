@@ -10,28 +10,50 @@
   </head>
 
   <body>
+    <div id="resCol">
+      <form id="resForm" action="congrats.js" method="get">
+        <fieldset>
 
-    <form action="reservations.js" method="post">
-      <fieldset>
-        <h3><label for="name">Name: </label><input type="text" name="name" id="name" class="input inputText" required> *</h3>
-        <h3><label for="age">Age: </label><input type="number" name="age" id="age" min="1" class="input inputText" required> *</h3>
-        <h3>Gender: *</h3><input type="radio" name="gender" id="gender" value="male" id="male" class="radio"><label for="male"> Male</label><br>
-                        <input type="radio" name="gender" value="female" id="female"><label for="female"> Female</label><br>
-                        <input type="radio" name="gender" value="other" id="other"><label for="other"> Other </label><input type="text" name="othergender" class="input inputText"><br>
-        <h3><label for="phone">Phone: </label></label><input type="text" name="phone" id="phone" class="input inputText"></h3> &nbsp;-AND/OR-
-        <h3><label for="email">Email: </label><input type="text" name="email" id="email" class="input inputText"></h3>
-        <h3><label for="date">Date of stay: </label><input type="date" name="date" id="date" class="input"> *</h3>
-        <h3><label for="party">How many people? </label><input type="number" name="party" id="party" min="1" class="input"> *</h3>
-        <h3>Pets? *</h3> <input type="radio" name="pets" id="pets" value="yes" class="radio"> Yes<br>
+          <h3><label for="name">Name: </label>
+            <input type="text" name="name" id="nom" class="input inputText" placeholder="What's your name?" required><strong class="imp"> *</strong></h3>
+
+          <h3><label for="age">Age: </label>
+            <input type="number" name="age" id="anos" min="1" class="input inputText" placeholder="How old are you?" required><strong class="imp"> *</strong></h3>
+
+          <h3 id="genero"><label for="gender" required> Gender:<strong class="imp"> *</strong></label></h3>
+                          <input type="radio" name="gender" value="male" id="male" class="radio"><label for="male"> Male</label><br>
+                          <input type="radio" name="gender" value="female" id="female"><label for="female"> Female</label><br>
+                          <input type="radio" name="gender" value="otherGender" id="otherGender"><label for="otherGender"> Other </label><input type="text" name="whichGx  ender" class="input inputText"><br>
+
+          <h3><label for="phone">Phone: </label></label><input type="text" name="phone" id="telefono" class="input inputText"></h3>
+
+          &nbsp;<i>-AND/OR-</i><strong class="imp"> *</strong>
+
+          <h3><label for="email">Email: </label><input type="text" name="email" id="correo" class="input inputText"></h3>
+
+          <h3><label for="date">Date of stay: </label>
+            <input type="date" name="date" id="fecha" class="input" required><strong class="imp"> *</strong></h3>
+
+          <h3><label for="party">How many people? </label>
+            <input type="number" name="party" id="personas" min="1" class="input" required><strong class="imp"> *</strong></h3>
+
+          <h3>Pets?</h3> <input type="radio" name="pets" id="mascotas" value="yes" class="radio"> Yes<br>
                         <input type="radio" name="pets" value-"no"> No<br>
-        <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h3><textarea name="notes" rows="5" cols="50" id="notes" class="input"></textarea><br><br>
-        <input type="submit" value="Submit">
-      </fieldset>
 
+          <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h3>
+            <textarea name="notes" rows="5" cols="50" id="notas" class="input"></textarea><br><br>
 
+          <input id="formSubmit" type="submit" value="Submit">
 
-    </form>
+        </fieldset>
+      </form>
+    </div>
 
+    <div id="locCol">
+      <h3 id="locTitle">This is the location you are making a reservation for:</h3>
+    </div>
+
+    <script type="text/javascript" src="reservations.js"></script>
   </body>
 
 </html>
