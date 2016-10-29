@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Food</title>
-    <link rel="stylesheet" href="style.css"></link>
-  </head>
-  <body>
-    <h3>Places to <cite>get a meal</cite> in Seattle</h3>
-    <table id="foodLocations"></table>
-    <script type="text/javascript" src="data.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Food</title>
+  <link rel="stylesheet" href="style.css"></link>
+</head>
+
+<body>
+
+  <h3>Places to <cite>get a meal</cite> in Seattle</h3>
+  <table id="foodLocations"></table>
+
+  <div class="mealMenu">
+    <!-- <button onclick="myFunction()" class="mealButton">CHOOSE MEAL TYPE</button> -->
+    <!-- <a>CHOOSE MEAL TYPE</a> -->
+    <nav class="mealNav">
+      <ul>
+        <li>
+          <ul class="mealChoice">
+            <!-- links for testting -->
+            <li><a href="food.html">Breakfast</a></li>
+            <li><a href="food.html">Lunch</a></li>
+            <li><a href="food.html">Dinner</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
 </html>

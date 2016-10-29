@@ -7,11 +7,12 @@
 #food {
 
 }
+
 #foodLocations td,th{
-border: 1px solid black;
-padding: 0.3em;
-background-color: #99ff99;
-font-size: 16px;
+  border: 1px solid black;
+  padding: 0.3em;
+  background-color: #99ff99;
+  font-size: 16px;
 }
 h3{
   animation-duration: 3s;
@@ -36,3 +37,37 @@ cite{
 @-webkit-keyframes blinker {
   50% { opacity: 0; }
 }
+
+/* Meal dropdown menu code start */
+.mealMenu:after {
+  content: "";
+  display: table;
+  width:100%;
+  background: #f0f8f7;
+}
+.mealButton {
+  position:absolute;
+  width: 960px;
+  margin: 0 auto;
+}
+.mealNav {
+  position:relative;
+  display:inline-block;
+}
+/*list of meal types below*/
+.mealChoice {
+  display: inline;
+  list-style-type: none;
+  position:relative;
+  display:inline-block;
+  /*display:none;*/
+  background: #f0f8f7;
+}
+
+.mealChoice li {
+  display: inline-block;
+  background-color: #f0f8f7;
+}
+
+
+/* Meal dropdown menu end ^ */
