@@ -1,3 +1,10 @@
+body {
+  padding: 1;
+  margin: 1;
+  font-family: Helvetica;
+  font-size: 17px;
+}
+
 .button {
   border: 5px solid black;
   width: 150px;
@@ -46,22 +53,28 @@ cite{
   background: #f0f8f7;
 }
 .mealButton {
-  position:absolute;
-  width: 960px;
+  position: relative;
+  width: 900px;
   margin: 0 auto;
 }
-.mealNav {
-  position:relative;
-  display:inline-block;
+.mealNav ul li{
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 200px;
+  text-align: left;
 }
 /*list of meal types below*/
 .mealChoice {
-  display: inline;
-  list-style-type: none;
-  position:relative;
-  display:inline-block;
-  /*display:none;*/
   background: #f0f8f7;
+  display: none;
+  list-style-type: none;
+  position: relative;
+  background-color: #82d5f5;
+  border: 1px dotted black;
+  text-align: left;
+  margin: auto;
+  margin-left: -15px;
 }
 
 .mealChoice li {
@@ -69,5 +82,8 @@ cite{
   background-color: #f0f8f7;
 }
 
+.mealMenu ul li:hover ul {
+  display: inline-block;
+}
 
 /* Meal dropdown menu end ^ */
