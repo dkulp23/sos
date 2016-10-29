@@ -10,6 +10,7 @@ var Location = function(obj) {
   this.openTime = obj.openTime;
   this.closeTime = obj.closeTime;
   this.restrictions = obj.restrictions;
+  this.reservations = obj.reservations || 0;
   allLocations.push(this);
 };
 
@@ -23,12 +24,14 @@ function instantiateLocations() {
 
 instantiateLocations();
 
+//helper function to create table elements
 function makeAnElementWithText(element, textContent, parent) {
   var childEl = document.createElement(element);
   childEl.textContent = textContent;
   parent.appendChild(childEl);
 };
 
+//helper function to create reservation button
 function makeAReservationButton(idName, parent) {
   var buttonEl = document.createElement('button');
   buttonEl.setAttribute('id', idName);
@@ -36,6 +39,7 @@ function makeAReservationButton(idName, parent) {
   parent.appendChild(buttonEl);
 };
 
+//helper function to create table rows
 function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
   var tableEl = document.getElementById(idName);
   var rowEl = document.createElement(rowElement);
@@ -47,6 +51,7 @@ function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
   tableEl.appendChild(rowEl);
 };
 
+//loop to create table with object instances in allLocations array
 function populateTable() {
   for (var i = 0; i < allLocations.length; i++) {
     createRow('foodLocations', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions);
@@ -54,3 +59,16 @@ function populateTable() {
 };
 
 populateTable();
+
+function reservationForm() {
+  localStorage.setItem('allLocations', JSON.stringify(allLocations));
+  window.location.assign('reservations.html');
+};
+
+function addEventListeners() {
+  for (var i = 0; i < allLocations.length; i++) {
+    document.getElementById(allLocations[i].name).addEventListener('click', reservationForm);
+  }
+}
+
+addEventListeners();
