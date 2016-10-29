@@ -13,6 +13,7 @@ body {
 }
 
 #food {
+  padding: 5px;
 }
 
 #foodLocations td,th{
@@ -70,10 +71,11 @@ cite{
   list-style-type: none;
   position: relative;
   background-color: #82d5f5;
-  border: 1px dotted black;
+  border: 1px dotted #f0f8f7;
   text-align: left;
   margin: auto;
-  margin-left: 15px;
+  margin-left: 10px;
+  padding:
 }
 
 .mealMenu ul li:hover ul {
