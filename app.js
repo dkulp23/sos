@@ -24,6 +24,14 @@ function instantiateLocations() {
 
 instantiateLocations();
 
+var map;
+function googleMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 10
+  });
+};
+
 //helper function to create table elements
 function makeAnElementWithText(element, textContent, parent) {
   var childEl = document.createElement(element);
@@ -71,7 +79,7 @@ function reservationForm(event) {
   };
   localStorage.setItem('reservation', JSON.stringify(reservedLocation));
   localStorage.setItem('allLocations', JSON.stringify(allLocations));
-  // window.location.assign('reservations.html');
+  window.location.assign('reservations.html');
 };
 
 function addEventListeners() {

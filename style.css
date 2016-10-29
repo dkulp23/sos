@@ -36,3 +36,8 @@ cite{
 @-webkit-keyframes blinker {
   50% { opacity: 0; }
 }
+
+#map {
+  width: 300px;
+  height: 300px;
+}
