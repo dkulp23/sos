@@ -1,0 +1,22 @@
+.input {
+  vertical-align: top;
+}
+
+.inputText {
+  height: 14px;
+  width: 150px;
+}
+
+.notesText {
+  /* TODO: make cursor start at top of box*/
+  height: 80px;
+  width: 300px;
+}
+
+.radio {
+  margin-top: -15px;
+}
+
+#title {
+  font-variant: small-caps;
+}
