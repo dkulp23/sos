@@ -3,6 +3,7 @@ body {
   margin: 1;
   font-family: Helvetica;
   font-size: 17px;
+  background: #f0f8f7;
 }
 
 .button {
@@ -12,7 +13,6 @@ body {
 }
 
 #food {
-
 }
 
 #foodLocations td,th{
@@ -46,27 +46,26 @@ cite{
 }
 
 /* Meal dropdown menu code start */
-.mealMenu:after {
-  content: "";
-  display: table;
-  width:100%;
-  background: #f0f8f7;
+.mealMenu {
+  animation-duration: 3s;
+  animation-name: slidein;
+  /*float: none; float right makes it funny */
 }
-.mealButton {
+
+.mealButton { /*reserving this below to make a button later*/
   position: relative;
-  width: 900px;
+  width: 500px;
   margin: 0 auto;
 }
 .mealNav ul li{
   position: relative;
-  display: inline-block;
   list-style-type: none;
   width: 200px;
   text-align: left;
+  /* margin: auto; this makes Choose Meal Type centered */
 }
 /*list of meal types below*/
 .mealChoice {
-  background: #f0f8f7;
   display: none;
   list-style-type: none;
   position: relative;
@@ -74,16 +73,11 @@ cite{
   border: 1px dotted black;
   text-align: left;
   margin: auto;
-  margin-left: -15px;
-}
-
-.mealChoice li {
-  display: inline-block;
-  background-color: #f0f8f7;
+  margin-left: 15px;
 }
 
 .mealMenu ul li:hover ul {
-  display: inline-block;
+  display: block;
+  width: 100px;
 }
-
 /* Meal dropdown menu end ^ */
