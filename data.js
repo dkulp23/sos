@@ -8,7 +8,7 @@ var breakfastLocationData = [
   {'name': 'Our Lady of Mt Carmel Breakfast', 'hood': 'First Hill', 'address': '508 Broadway, Seattle', 'days': [2, 3, 4, 5, 6, 7], 'openTime': 9, 'closeTime': 11, 'restrictions': 'none'},
   {'name': 'Sacred Heart Church Breakfast', 'hood': 'Uptown', 'address': '232 Warren Ave N, Seattle', 'days': [1, 2, 3, 4, 5], 'restrictions': 'none'},
   {'name': 'Mary\'s Place Breakfast', 'hood': 'SLU', 'address': '210 Dexter Ave, Seattle', 'days': [1, 2, 3, 4, 5], 'openTime': 8, 'closeTime': 9, 'restrictions': 'Women & Children Only'},
-];
+  ];
 //1 = Mon
 var lunchLocationData = [
   {'name': 'Millionaire Club Charity lunch', 'hood': 'Belltown', 'address': '2515 Western Ave, Seattle', 'days': [1, 2, 3, 4, 5], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
@@ -31,7 +31,7 @@ var dinnerLocationData = [
   {'name': 'New Horizons Ministries', 'hood': 'Belltown', 'address': '2709 3rd Ave', 'days': [1, 2, 3, 7], 'openTime': 18, 'closeTime': 20, 'restrictions': 'Youth under 21'}, //5
   {'name': 'Recovery Cafe', 'hood': 'SLU', 'address': '2022 Boren Ave', 'days': [2, 3, 4, 5, 6], 'openTime': 17, 'closeTime': 18, 'restrictions': 'Must be sober 24 hours'}, //6
   {'name': 'Friday Feasts ROOTS', 'hood': 'U District', 'address': '1415 NE 43rd St', 'days': [5], 'openTime': 18, 'closeTime': 19, 'restrictions': 'none'}, //7
-  {'name': 'Phinney Neighborhood Association', 'hood': 'Greenlake', 'address': '5515 Phinney Ave N', 'days': [2], 'openTime': 17, 'closeTime': 18, 'restrictions': 'none'}, //8
+  {'name': 'Phinney Neighbor', 'hood': 'Association', 'hood': 'Greenlake', 'address': '5515 Phinney Ave N', 'days': [2], 'openTime': 17, 'closeTime': 18, 'restrictions': 'none'}, //8
   {'name': 'Saint Martin de Porres Shelter', 'hood': 'SODO', 'address': '1561 Alaskan Way S', 'days': [1, 2, 3, 4, 5, 6, 7], 'openTime': 18, 'closeTime': 22, 'restrictions': 'men 55+'}, //9
   // {'name': ' ', 'hood': ' ', 'address': ' ', 'days': [1, 2, 3, 4, 5, 6, 7], 'openTime': 17, 'closeTime': 19, 'restrictions': ' '}, //10
 ];
