@@ -60,15 +60,24 @@ function populateTable() {
 
 populateTable();
 
-function reservationForm() {
+function reservationForm(event) {
+  var reservationClick = event.target.id;
+  var reservedLocation = [];
+  for (var i = 0; i < allLocations.length; i++) {
+    if (reservationClick === allLocations[i].name) {
+      allLocations[i].reservations += 1;
+      reservedLocation.push(allLocations[i]);
+    }
+  };
+  localStorage.setItem('reservation', JSON.stringify(reservedLocation));
   localStorage.setItem('allLocations', JSON.stringify(allLocations));
-  window.location.assign('reservations.html');
+  // window.location.assign('reservations.html');
 };
 
 function addEventListeners() {
   for (var i = 0; i < allLocations.length; i++) {
     document.getElementById(allLocations[i].name).addEventListener('click', reservationForm);
   }
-}
+};
 
 addEventListeners();
