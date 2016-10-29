@@ -27,8 +27,8 @@ instantiateLocations();
 var map;
 function googleMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 10
+    center: {lat: 47.6050, lng: -122.3344},
+    zoom: 13
   });
 };
 

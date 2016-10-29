@@ -38,6 +38,7 @@ cite{
 }
 
 #map {
-  width: 300px;
+  width: 500px;
   height: 300px;
+  margin: 0 auto;
 }
