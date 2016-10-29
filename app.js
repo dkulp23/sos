@@ -29,6 +29,13 @@ function makeAnElementWithText(element, textContent, parent) {
   parent.appendChild(childEl);
 };
 
+function makeAReservationButton(idName, parent) {
+  var buttonEl = document.createElement('button');
+  buttonEl.setAttribute('id', idName);
+  buttonEl.textContent = 'Make a Reservation';
+  parent.appendChild(buttonEl);
+};
+
 function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
   var tableEl = document.getElementById(idName);
   var rowEl = document.createElement(rowElement);
@@ -36,6 +43,7 @@ function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
   makeAnElementWithText(El, tC2, rowEl);
   makeAnElementWithText(El, tC3, rowEl);
   makeAnElementWithText(El, tC4, rowEl);
+  makeAReservationButton(tC1, rowEl);
   tableEl.appendChild(rowEl);
 };
 
