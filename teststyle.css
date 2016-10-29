@@ -1,0 +1,40 @@
+*{
+  margin:0px auto;
+}
+
+html, body {
+  text-align:center;
+}
+
+td {
+  min-width: 200px;
+  min-height: 200px;
+}
+
+tr {
+  min-height: 200px;
+  /*opacity: 0.5;*/
+}
+
+.button {
+  border: 5px solid black;
+  width: 200px;
+  height: 200px;
+}
+
+#food {
+  padding: 5px;
+}
+
+#food2 {
+  padding: 5px;
+}
+
+#circleTable {
+  background: url('assets/lifepreserver/lifepreserver2.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  /*opacity: 0.5;*/
+  /*width:500px;
+  height:500px;
+}
