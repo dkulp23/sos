@@ -53,11 +53,12 @@ cite{
   /*float: none; float right makes it funny */
 }
 
-.mealButton { /*reserving this below to make a button later*/
+/*reserving this below to make a button later*/
+/*.mealButton {
   position: relative;
   width: 500px;
   margin: 0 auto;
-}
+}*/
 .mealNav ul li{
   position: relative;
   list-style-type: none;
