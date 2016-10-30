@@ -83,3 +83,16 @@ cite{
   width: 100px;
 }
 /* Meal dropdown menu end ^ */
+
+/* start code to display preview of meal type locations */
+.box{
+    display: none;
+    width: 100%;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+/* end code to display preview of meal type locations */
