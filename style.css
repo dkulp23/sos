@@ -46,51 +46,46 @@ cite{
 
 /* Meal dropdown menu code start */
 .mealMenu {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: slidein;
   /*float: none; float right makes it funny */
 }
 
-/*reserving this below to make a button later*/
-/*.mealButton {
-  position: relative;
-  width: 500px;
-  margin: 0 auto;
-}*/
 .mealNav ul li{
   position: relative;
   list-style-type: none;
-  width: 200px;
+  /*width: 200px;*/
   text-align: left;
   /* margin: auto; this makes Choose Meal Type centered */
 }
 /*list of meal types below*/
 .mealChoice {
   display: none;
-  list-style-type: none;
   position: relative;
   background-color: #82d5f5;
   border: 1px dotted #f0f8f7;
   text-align: left;
   margin: auto;
   margin-left: 10px;
-  padding:
 }
 
 .mealMenu ul li:hover ul {
-  display: block;
-  width: 100px;
+  display:block;
+  width: 510px;
+  -webkit-box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
+  -moz-box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
+  box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
 }
 /* Meal dropdown menu end ^ */
 
 /* start code to display preview of meal type locations */
 .box{
-    display: none;
-    width: 100%;
+  display: none;
+  width: 100%;
 }
 a:hover + .box,.box:hover{
-    display: block;
-    position: relative;
-    z-index: 100;
+  display: block;
+  position: relative;
+  z-index: 100;
 }
 /* end code to display preview of meal type locations */
