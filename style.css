@@ -1,6 +1,4 @@
 body {
-  padding: 1;
-  margin: 1;
   font-family: Helvetica;
   font-size: 17px;
   background: #f0f8f7;
@@ -90,7 +88,6 @@ cite{
     display: none;
     width: 100%;
 }
-
 a:hover + .box,.box:hover{
     display: block;
     position: relative;

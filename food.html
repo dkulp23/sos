@@ -10,12 +10,7 @@
   <!-- flashy message on top Get a Meal -->
   <h3>Places to <cite>get a meal</cite> in Seattle</h3>
 
-  <!-- <a href="file:///Users/Maksim/cf/201/sos/breakfastPlaces.html">Hover to see breakfast</a>
-  <div class="box">
-    <iframe src="file:///Users/Maksim/cf/201/sos/breakfastPlaces.html" width = "500px" height = "350px"></iframe>
-  </div> -->
-
-  <!-- choose meal type Breakfast Lunch Dinner -->
+  <!-- choose meal type: Breakfast Lunch Dinner -->
   <div class="mealMenu">
     <nav class="mealNav">
       <ul>
@@ -28,14 +23,31 @@
                   <iframe src="file:///Users/Maksim/cf/201/sos/breakfastPlaces.html" width = "500px" height = "350px"></iframe>
                 </div>
             </li>
+            <!-- breakfast hover display ends -->
 
-            <li id="lunch"><a href="food.html">Lunch</a></li>
-            <li id="dinner"><a href="food.html">Dinner</a></li>
+            <!-- lunch hover displays locations -->
+            <li id="lunch">
+              <a href="file:///Users/Maksim/cf/201/sos/lunchPlaces.html">Lunch</a>
+                <div class="box">
+                  <iframe src="file:///Users/Maksim/cf/201/sos/lunchPlaces.html" width = "500px" height = "350px"></iframe>
+                </div>
+            </li>
+            <!-- lunch hover display ends -->
+
+            <!-- dinner hover displays locations -->
+            <li id="dinner">
+              <a href="file:///Users/Maksim/cf/201/sos/dinnerPlaces.html">Dinner</a>
+                <div class="box">
+                  <iframe src="file:///Users/Maksim/cf/201/sos/dinnerPlaces.html" width = "500px" height = "350px"></iframe>
+                </div>
+            </li>
+            <!-- dinner hover display ends -->
           </ul>
         </li>
       </ul>
     </nav>
   </div>
+<!-- ^ choose meal type ends ^ -->
 
   <!-- displaying places to eat in a table -->
   <table id="foodLocations"></table>

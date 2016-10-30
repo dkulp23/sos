@@ -9,7 +9,7 @@ var breakfastLocationData = [
   {'name': 'Sacred Heart Church Breakfast', 'hood': 'Uptown', 'address': '232 Warren Ave N, Seattle', 'days': [1, 2, 3, 4, 5], 'restrictions': 'none'},
   {'name': 'Mary\'s Place Breakfast', 'hood': 'SLU', 'address': '210 Dexter Ave, Seattle', 'days': [1, 2, 3, 4, 5], 'openTime': 8, 'closeTime': 9, 'restrictions': 'Women & Children Only'},
   ];
-//1 = Mon
+//1 = Monday
 var lunchLocationData = [
   {'name': 'Millionaire Club Charity lunch', 'hood': 'Belltown', 'address': '2515 Western Ave, Seattle', 'days': [1, 2, 3, 4, 5], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
   {'name': 'YWCA Angeline\'s Meals lunch', 'hood': 'Belltown', 'address': '2030 3rd Ave, Seattle', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 11, 'closeTime': 13, 'restrictions': 'Women 18+'},
