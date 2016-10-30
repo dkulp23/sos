@@ -45,18 +45,21 @@ cite{
 }
 
 /* Meal dropdown menu code start */
+#here {
+  color: red;
+}
 .mealMenu {
   animation-duration: 2s;
   animation-name: slidein;
+  text-decoration: underline;
   /*float: none; float right makes it funny */
 }
 
 .mealNav ul li{
   position: relative;
   list-style-type: none;
-  /*width: 200px;*/
+  width: 255px;
   text-align: left;
-  /* margin: auto; this makes Choose Meal Type centered */
 }
 /*list of meal types below*/
 .mealChoice {
