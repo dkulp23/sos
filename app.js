@@ -90,10 +90,14 @@ function reservationForm(event) {
   window.location.assign('reservations.html');
 };
 
-function addEventListeners() {
+function makeReservationEventListeners() {
   for (var i = 0; i < allLocations.length; i++) {
     document.getElementById(allLocations[i].name).addEventListener('click', reservationForm);
   }
 };
 
-addEventListeners();
+makeReservationEventListeners();
+
+// function addLocationButtonClick(event) {
+//
+// }
