@@ -19,13 +19,20 @@
   padding-top: -30;
 }
 
+.redText {
+  color: red;
+}
+
 #locCol {
   float: right;
+  padding-right: 25%;
 }
 
 #resCol {
   float: left;
 }
+
+
 
 #title {
   font-variant: small-caps;

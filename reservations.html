@@ -6,24 +6,25 @@
     <link rel="stylesheet" href="reservations.css">
     <title>Make a Reservation!</title>
 
-    <h1 id="title">Make a Reservation!</h1>
+    <h1 id="title">Make a Reservation</h1>
   </head>
 
   <body>
+
     <div id="resCol">
-      <form id="resForm" action="congrats.js" method="get">
+      <form id="resForm">
         <fieldset>
 
           <h3><label for="name">Name: </label>
-            <input type="text" name="name" id="nom" class="input inputText" placeholder="What's your name?" required><strong class="imp"> *</strong></h3>
+            <input type="text" name="name" id="nom" class="input inputText"><strong class="imp"> *</strong></h3>
 
           <h3><label for="age">Age: </label>
-            <input type="number" name="age" id="anos" min="1" class="input inputText" placeholder="How old are you?" required><strong class="imp"> *</strong></h3>
+            <input type="number" name="age" id="anos" min="1" class="input inputText"><strong class="imp"> *</strong></h3>
 
-          <h3 id="genero"><label for="gender" required> Gender:<strong class="imp"> *</strong></label></h3>
+          <h3 id="genero"><label for="gender"> Gender:<strong class="imp"> *</strong></label></h3>
                           <input type="radio" name="gender" value="male" id="male" class="radio"><label for="male"> Male</label><br>
                           <input type="radio" name="gender" value="female" id="female"><label for="female"> Female</label><br>
-                          <input type="radio" name="gender" value="otherGender" id="otherGender"><label for="otherGender"> Other </label><input type="text" name="whichGx  ender" class="input inputText"><br>
+                          <input type="radio" name="gender" value="otherGender" id="otherGender"><label for="otherGender"> Other </label><input type="text" name="whichGender" class="input inputText" id="genderText"><br>
 
           <h3><label for="phone">Phone: </label></label><input type="text" name="phone" id="telefono" class="input inputText"></h3>
 
@@ -32,10 +33,10 @@
           <h3><label for="email">Email: </label><input type="text" name="email" id="correo" class="input inputText"></h3>
 
           <h3><label for="date">Date of stay: </label>
-            <input type="date" name="date" id="fecha" class="input" required><strong class="imp"> *</strong></h3>
+            <input type="date" name="date" id="fecha" class="input"><strong class="imp"> *</strong></h3>
 
           <h3><label for="party">How many people? </label>
-            <input type="number" name="party" id="personas" min="1" class="input" required><strong class="imp"> *</strong></h3>
+            <input type="number" name="party" id="personas" min="1" class="input"><strong class="imp"> *</strong></h3>
 
           <h3>Pets?</h3> <input type="radio" name="pets" id="mascotas" value="yes" class="radio"> Yes<br>
                         <input type="radio" name="pets" value-"no"> No<br>
@@ -43,15 +44,17 @@
           <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h3>
             <textarea name="notes" rows="5" cols="50" id="notas" class="input"></textarea><br><br>
 
-          <input id="formSubmit" type="submit" value="Submit">
+          <button id="formSubmit" value="Submit">Submit Reservation</button>
 
         </fieldset>
       </form>
     </div>
 
+
     <div id="locCol">
       <h3 id="locTitle">This is the location you are making a reservation for:</h3>
     </div>
+
 
     <script type="text/javascript" src="reservations.js"></script>
   </body>
