@@ -94,6 +94,15 @@ function setMealSelector() {
 
 setMealSelector();
 
+function eventListenerForMealSelection() {
+  var radioForm = document.forms['mealSelection'].elements['meal'];
+  for (var i = 0; i < radioForm.length; i++) {
+    radioForm.onclick = function() {
+      
+    }
+  }
+}
+
 function reservationForm(event) {
   var reservationClick = event.target.id;
   var reservedLocation = [];
