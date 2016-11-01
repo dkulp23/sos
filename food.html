@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Food</title>
-    <link rel="stylesheet" href="style.css"></link>
-  </head>
-  <body>
-    <h3>Places to <cite>get a meal</cite> in Seattle</h3>
-    <table id="foodLocations"></table>
-    <script type="text/javascript" src="data.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Food</title>
+  <link rel="stylesheet" href="style.css"></link>
+</head>
+
+<body>
+  <!-- flashy message on top Get a Meal -->
+  <h3>Places to <cite>get a meal</cite> in Seattle</h3>
+
+  <!-- choose meal type: Breakfast Lunch Dinner -->
+  <div class="mealMenu">
+    <nav class="mealNav">
+      <ul>
+        <li><h4><a>CHOOSE MEAL TYPE<a id="here"> HERE</a></a></h4>
+          <ul class="mealChoice">
+            <!-- breakfast hover displays locations -->
+            <li id="breakfast">
+              <a href="file:///Users/Maksim/cf/201/sos/breakfastPlaces.html">Breakfast</a>
+              <div class="box">
+                <iframe src="file:///Users/Maksim/cf/201/sos/breakfastPlaces.html" width = "500px" height = "350px"></iframe>
+              </div>
+            </li>
+            <!-- breakfast hover display ends -->
+
+            <!-- lunch hover displays locations -->
+            <li id="lunch">
+              <a href="file:///Users/Maksim/cf/201/sos/lunchPlaces.html">Lunch</a>
+              <div class="box">
+                <iframe src="file:///Users/Maksim/cf/201/sos/lunchPlaces.html" width = "500px" height = "350px"></iframe>
+              </div>
+            </li>
+            <!-- lunch hover display ends -->
+
+            <!-- dinner hover displays locations -->
+            <li id="dinner">
+              <a href="file:///Users/Maksim/cf/201/sos/dinnerPlaces.html">Dinner</a>
+              <div class="box">
+                <iframe src="file:///Users/Maksim/cf/201/sos/dinnerPlaces.html" width = "500px" height = "350px"></iframe>
+              </div>
+            </li>
+            <!-- dinner hover display ends -->
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- ^ choose meal type ends ^ -->
+
+  <div id="map"></div>
+
+  <!-- displaying places to eat in a table -->
+  <table id="foodLocations"></table>
+
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz44jiFCt4D0k2bHsYrykFXykVD3xLcro&callback=googleMap" ></script>
+  <script type="text/javascript" src="googleMap.js"></script>
+
+</body>
+
 </html>
