@@ -37,28 +37,14 @@ function googleMap() {
 var breakfast = document.getElementById("breakfast");
 var lunch = document.getElementById("lunch");
 var dinner = document.getElementById("dinner");
-//display all Breakfast locations when clicked
-function clickBreakfast(event) {
-  for(var i = 0; i < breakfastLocationData.length; i++) {
-    alert(breakfastLocationData[i].name);
-  }
-}
-//display all Lunch locations when clicked
-function clickLunch(event) {
-  for(var i = 0; i < lunchLocationData.length; i++) {
-    alert(lunchLocationData[i].name);
-  }
-}
-//display all Dinner locations when clicked
-function clickDinner(event) {
-  for(var i = 0; i < dinnerLocationData.length; i++) {
-    alert(dinnerLocationData[i].name);
-  }
-}
 
-breakfast.addEventListener("click", clickBreakfast);
-lunch.addEventListener("click", clickLunch);
-dinner.addEventListener("click", clickDinner);
+//display all Breakfast locations when clicked
+// function clickBreakfast(event) {
+//   for(var i = 0; i < breakfastLocationData.length; i++) {
+//     alert(breakfastLocationData[i].name);
+//   }
+// }
+// breakfast.addEventListener("click", clickBreakfast);
 // ^ end filtering click event for meal types ^
 
 //helper function to create table elements

@@ -58,6 +58,14 @@ function populateTable() {
 
 populateTable();
 
+//helper function to create reservation button
+function makeAReservationButton(idName, parent) {
+  var buttonEl = document.createElement('button');
+  buttonEl.setAttribute('id', idName);
+  buttonEl.textContent = 'Make a Reservation';
+  parent.appendChild(buttonEl);
+};
+
 function reservationForm(event) {
   var reservationClick = event.target.id;
   var reservedLocation = [];
@@ -69,7 +77,7 @@ function reservationForm(event) {
   };
   localStorage.setItem('reservation', JSON.stringify(reservedLocation));
   localStorage.setItem('allLocations', JSON.stringify(allLocations));
-  // window.location.assign('reservations.html');
+  window.location.assign('reservations.html');
 };
 
 function addEventListeners() {
