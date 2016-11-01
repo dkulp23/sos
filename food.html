@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Food</title>
+    <link rel="stylesheet" href="style.css"></link>
+  </head>
+  <body>
+    <h3>Places to <cite>get a meal</cite> in Seattle</h3>
+    <div id="map"></div>
+    <table id="foodLocations"></table>
+    <footer>
+      <div class="newLocationButton">
+        <button type="button" name="addNewLocation" id="newLocation">Suggest a Location</button>
+      </div>
+    </footer>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz44jiFCt4D0k2bHsYrykFXykVD3xLcro&callback=googleMap" ></script>
+    <script type="text/javascript" src="googleMap.js"></script>
+  </body>
 <head>
   <meta charset="utf-8">
   <title>Food</title>
