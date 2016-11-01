@@ -19,6 +19,17 @@ body {
   font-size: 15px;
 }
 
+h4{
+  text-align: center;
+}
+
 #foodPage {
   color: blue;
+}
+
+#map {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  float:center;
 }
