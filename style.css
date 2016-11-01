@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-body
-{
+body {
   animation: pulse 5s infinite;
 
 
@@ -29,15 +27,11 @@ body
     animation:rotate 10s linear reverse infinite; }
 @keyframes rotate { 100% { transform:rotate(360deg); } }
 
-
-
-=======
-body {
+/*body {
   font-family: Helvetica;
   font-size: 17px;
   background: #f0f8f7;
-}
->>>>>>> 46d720b09eaaa7276e1e5503fed8be84c013eb1c
+}*/
 
 .button {
   border: 5px solid black;
