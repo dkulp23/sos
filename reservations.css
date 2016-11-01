@@ -1,3 +1,8 @@
+p {
+  font-size: 11pt;
+  font-weight: normal;
+}
+
 .imp {
   color: red;
 }
@@ -26,6 +31,11 @@
 #locCol {
   float: right;
   padding-right: 25%;
+  text-align: center;
+}
+
+#locTitle {
+
 }
 
 #resCol {
