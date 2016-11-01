@@ -71,6 +71,7 @@ function reservationForm(event) {
   };
   localStorage.setItem('reservation', JSON.stringify(reservedLocation));
   localStorage.setItem('allLocations', JSON.stringify(allLocations));
+  localStorage.setItem('thisReservation', reservedLocation);
   window.location.assign('reservations.html');
 };
 
