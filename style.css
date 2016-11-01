@@ -1,3 +1,36 @@
+body
+{
+  animation: pulse 5s infinite;
+
+
+  }
+
+  @keyframes pulse
+   {
+     0%   {background: #66ffff;}
+     25%  {background: #ffffcc;}
+     50%  {background: #ffcc66;}
+     75%  {background: #99ff99;}
+     100% {background: #cc66ff;}
+}
+.circle {
+   border-radius: 200%;
+   width:100px; height:100px;
+   margin-top:180px; transform-origin:200% center;
+   position:absolute; animation:rotate 10s linear infinite;
+ }
+.circle:before {
+    content:'SOS';font-size: 55px;
+    border-radius: 200%;
+    position: absolute;
+    height:100px; width:100%;
+    background: radial-gradient(circle at 400px 200px, #5cabff, red);
+    animation:rotate 10s linear reverse infinite; }
+@keyframes rotate { 100% { transform:rotate(360deg); } }
+
+
+
+
 .button {
   border: 5px solid black;
   width: 150px;
@@ -14,7 +47,9 @@ background-color: #99ff99;
 font-size: 16px;
 }
 h3{
-  animation-duration: 3s;
+  font-family: "Ar Berkley";
+  animation-duration: 10s;
+  font-size: 20px;
   animation-name: slidein;
 }
 @keyframes slidein {
