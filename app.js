@@ -6,6 +6,7 @@ var Location = function(obj) {
   this.name = obj.name;
   this.hood = obj.hood;
   this.address = obj.address;
+  this.mealType = obj.meal;
   this.daysOpen = obj.days;
   this.openTime = obj.openTime;
   this.closeTime = obj.closeTime;
@@ -56,13 +57,14 @@ function makeAReservationButton(idName, parent) {
 };
 
 //helper function to create table rows
-function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
+function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4, tC5) {
   var tableEl = document.getElementById(idName);
   var rowEl = document.createElement(rowElement);
   makeAnElementWithText(El, tC1, rowEl);
   makeAnElementWithText(El, tC2, rowEl);
   setClassOfAddressCells(El, tC3, rowEl);
   makeAnElementWithText(El, tC4, rowEl);
+  makeAnElementWithText(El, tC5, rowEl);
   makeAReservationButton(tC1, rowEl);
   tableEl.appendChild(rowEl);
 };
@@ -70,11 +72,27 @@ function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
 //loop to create table with object instances in allLocations array
 function populateTable() {
   for (var i = 0; i < allLocations.length; i++) {
-    createRow('foodLocations', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions);
+    createRow('foodTable', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions, allLocations[i].mealType);
   }
 };
 
 populateTable();
+
+function setMealSelector() {
+  var tableEl = document.getElementById('foodTable');
+  var tableCells = tableEl.getElementsByTagName('td');
+  for (var i = 0; i < allLocations.length; i++) {
+    if (tableCells[i].textContent === 'breakfast') {
+      tableCells[i].setAttribute('class', 'breakfast');
+    } else if (tableCells[i].textContent === 'lunch') {
+      tableCells[i].setAttribute('class', 'lunch');
+    } else if (tableCells[i].textContent === 'dinner') {
+      tableCells[i].setAttribute('class', 'dinner');
+    }
+  }
+};
+
+setMealSelector();
 
 function reservationForm(event) {
   var reservationClick = event.target.id;

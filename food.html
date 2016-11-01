@@ -7,8 +7,20 @@
   </head>
   <body>
     <h3>Places to <cite>get a meal</cite> in Seattle</h3>
+    <form id="mealSelection">
+      <input type="radio" name="meal" value="breakfast"/> Breakfast
+      <input type="radio" name="meal" value="lunch"/> Lunch
+      <input type="radio" name="meal" value="dinner"> Dinner
+    </form>
     <div id="map"></div>
-    <table id="foodLocations"></table>
+    <table id="foodTable">
+      <thead id="foodHeaderRow">
+        <th>Location Name</th>
+        <th>Neighborhood</th>
+        <th>Address(click for map)</th>
+        <th>Requirements</th>
+      </thead>
+    </table>
     <footer class="footer">
       <div>
         <button type="button" name="addLocation">Click here to suggest a new location.</button>
