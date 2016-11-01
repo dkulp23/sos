@@ -111,3 +111,9 @@ function addEventListeners() {
 };
 
 addEventListeners();
+
+function newLocationButtonClick() {
+  window.location.assign('newLocation.html');
+};
+
+document.getElementById('newLocation').addEventListener('click', newLocationButtonClick);
