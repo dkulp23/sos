@@ -80,6 +80,7 @@ populateTable();
 
 function filterTheMealsList(event) {
   populateTable();
+  makeReservationEventListeners();
   var tableEl = document.getElementById('foodTable');
   var tableCells = tableEl.getElementsByTagName('td');
   for (var i = 0; i < tableCells.length; i++) {
