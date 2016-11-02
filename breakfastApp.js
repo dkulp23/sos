@@ -17,46 +17,14 @@ var Location = function(obj) {
 function instantiateLocations() {
   for(var i = 0; i < breakfastLocationData.length; i++) {
     new Location(breakfastLocationData[i]);
-    new Location(lunchLocationData[i]);
-    new Location(dinnerLocationData[i]);
   }
 }
 
 instantiateLocations();
 
-var map;
-
-function googleMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 47.6050, lng: -122.3344},
-    zoom: 13
-  });
-};
-
-// start filtering meal type locations when clicked
-var breakfast = document.getElementById("breakfast");
-var lunch = document.getElementById("lunch");
-var dinner = document.getElementById("dinner");
-
-//display all Breakfast locations when clicked
-// function clickBreakfast(event) {
-//   for(var i = 0; i < breakfastLocationData.length; i++) {
-//     alert(breakfastLocationData[i].name);
-//   }
-// }
-// breakfast.addEventListener("click", clickBreakfast);
-// ^ end filtering click event for meal types ^
-
 //helper function to create table elements
 function makeAnElementWithText(element, textContent, parent) {
   var childEl = document.createElement(element);
-  childEl.textContent = textContent;
-  parent.appendChild(childEl);
-};
-
-function setClassOfAddressCells(element, textContent, parent) {
-  var childEl = document.createElement(element);
-  childEl.setAttribute('class', 'address');
   childEl.textContent = textContent;
   parent.appendChild(childEl);
 };
@@ -75,7 +43,7 @@ function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
   var rowEl = document.createElement(rowElement);
   makeAnElementWithText(El, tC1, rowEl);
   makeAnElementWithText(El, tC2, rowEl);
-  setClassOfAddressCells(El, tC3, rowEl);
+  makeAnElementWithText(El, tC3, rowEl);
   makeAnElementWithText(El, tC4, rowEl);
   makeAReservationButton(tC1, rowEl);
   tableEl.appendChild(rowEl);
@@ -90,21 +58,25 @@ function populateTable() {
 
 populateTable();
 
+//helper function to create reservation button
+function makeAReservationButton(idName, parent) {
+  var buttonEl = document.createElement('button');
+  buttonEl.setAttribute('id', idName);
+  buttonEl.textContent = 'Make a Reservation';
+  parent.appendChild(buttonEl);
+};
+
 function reservationForm(event) {
   var reservationClick = event.target.id;
   var reservedLocation = [];
-  var thisLocation;
   for (var i = 0; i < allLocations.length; i++) {
     if (reservationClick === allLocations[i].name) {
       allLocations[i].reservations += 1;
       reservedLocation.push(allLocations[i]);
-      thisLocation = allLocations[i];
     }
   };
   localStorage.setItem('reservation', JSON.stringify(reservedLocation));
   localStorage.setItem('allLocations', JSON.stringify(allLocations));
-  localStorage.setItem('thisReservation', '');
-  localStorage.setItem('thisReservation', JSON.stringify(thisLocation));
   window.location.assign('reservations.html');
 };
 
@@ -115,9 +87,3 @@ function addEventListeners() {
 };
 
 addEventListeners();
-
-function newLocationButtonClick() {
-  window.location.assign('newLocation.html');
-};
-
-document.getElementById('newLocation').addEventListener('click', newLocationButtonClick);

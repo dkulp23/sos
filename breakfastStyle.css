@@ -1,0 +1,20 @@
+body {
+  padding: 1;
+  margin: 1;
+  font-family: Helvetica;
+  font-size: 17px;
+  background: #f0f8f7;
+}
+
+.button {
+  border: 5px solid black;
+  width: 150px;
+  height: 150px;
+}
+
+#foodLocations td,th{
+  border: 1px solid black;
+  padding: 0.3em;
+  background-color: #57da9e;
+  font-size: 15px;
+}
