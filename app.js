@@ -32,12 +32,10 @@ function googleMap() {
     zoom: 13
   });
 };
-
 // start filtering meal type locations IF CLICKED. saving for now just in case
 // var breakfast = document.getElementById("breakfast");
 // var lunch = document.getElementById("lunch");
 // var dinner = document.getElementById("dinner");
-
 //display all Breakfast locations when clicked
 // function clickBreakfast(event) {
 //   for(var i = 0; i < breakfastLocationData.length; i++) {
@@ -67,6 +65,18 @@ function makeAReservationButton(idName, parent) {
   buttonEl.setAttribute('id', idName);
   buttonEl.textContent = 'Make a Reservation';
   parent.appendChild(buttonEl);
+
+  //display hour property for current time for user
+  var hour = new Date().getHours();//assigns curent time HR
+  hour;
+  if(hour <= 20 && hour >= 14) //range of time open to close
+  {
+    buttonEl.style.backgroundColor = 'transparent'; //clear if place is open
+  }
+  else{
+    buttonEl.style.backgroundColor = 'red'; //red if place is closed
+  }
+
 };
 
 //helper function to create table rows
@@ -121,15 +131,3 @@ function newLocationButtonClick() {
 };
 
 document.getElementById('newLocation').addEventListener('click', newLocationButtonClick);
-
-//saving for testing
-var d=new Date();
-var h=d.getHours();
-h;
-if(h<=16 && h>=14)
-{
-alert(h);
-}
-else{
-alert(d);
-}
