@@ -33,10 +33,10 @@ function googleMap() {
   });
 };
 
-// start filtering meal type locations when clicked
-var breakfast = document.getElementById("breakfast");
-var lunch = document.getElementById("lunch");
-var dinner = document.getElementById("dinner");
+// start filtering meal type locations IF CLICKED. saving for now just in case
+// var breakfast = document.getElementById("breakfast");
+// var lunch = document.getElementById("lunch");
+// var dinner = document.getElementById("dinner");
 
 //display all Breakfast locations when clicked
 // function clickBreakfast(event) {
