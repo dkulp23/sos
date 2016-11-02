@@ -78,30 +78,27 @@ function populateTable() {
 
 populateTable();
 
-function setMealSelector() {
+function filterTheMealsList(event) {
+  populateTable();
   var tableEl = document.getElementById('foodTable');
   var tableCells = tableEl.getElementsByTagName('td');
-  for (var i = 0; i < allLocations.length; i++) {
-    if (tableCells[i].textContent === 'breakfast') {
-      tableCells[i].setAttribute('class', 'breakfast');
-    } else if (tableCells[i].textContent === 'lunch') {
-      tableCells[i].setAttribute('class', 'lunch');
-    } else if (tableCells[i].textContent === 'dinner') {
-      tableCells[i].setAttribute('class', 'dinner');
+  for (var i = 0; i < tableCells.length; i++) {
+    if (tableCells[i].textContent === 'breakfast' || tableCells[i].textContent === 'lunch' || tableCells[i].textContent === 'dinner') {
+      if (tableCells[i].textContent !== event.target.value) {
+        tableCells[i].parentNode.setAttribute('class', 'hidden');
+      }
     }
+  };
+};
+
+function eventListenerForMealSelection() {
+  var radioForm = document.getElementsByName('meal');
+  for (var i = 0; i < radioForm.length; i++) {
+    radioForm[i].addEventListener('change', filterTheMealsList);
   }
 };
 
-setMealSelector();
-
-function eventListenerForMealSelection() {
-  var radioForm = document.forms['mealSelection'].elements['meal'];
-  for (var i = 0; i < radioForm.length; i++) {
-    radioForm.onclick = function() {
-      
-    }
-  }
-}
+eventListenerForMealSelection();
 
 function reservationForm(event) {
   var reservationClick = event.target.id;
