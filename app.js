@@ -93,14 +93,18 @@ populateTable();
 function reservationForm(event) {
   var reservationClick = event.target.id;
   var reservedLocation = [];
+  var thisLocation;
   for (var i = 0; i < allLocations.length; i++) {
     if (reservationClick === allLocations[i].name) {
       allLocations[i].reservations += 1;
       reservedLocation.push(allLocations[i]);
+      thisLocation = allLocations[i];
     }
   };
   localStorage.setItem('reservation', JSON.stringify(reservedLocation));
   localStorage.setItem('allLocations', JSON.stringify(allLocations));
+  localStorage.setItem('thisReservation', '');
+  localStorage.setItem('thisReservation', JSON.stringify(thisLocation));
   window.location.assign('reservations.html');
 };
 

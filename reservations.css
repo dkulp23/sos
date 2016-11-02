@@ -1,3 +1,12 @@
+p {
+  font-size: 11pt;
+  font-weight: normal;
+}
+
+.imp {
+  color: red;
+}
+
 .input {
   vertical-align: top;
 }
@@ -7,15 +16,33 @@
   width: 150px;
 }
 
-.notesText {
-  /* TODO: make cursor start at top of box*/
-  height: 80px;
-  width: 300px;
+.placeholder {
+  color: red;
 }
 
 .radio {
-  margin-top: -15px;
+  padding-top: -30;
 }
+
+.redText {
+  color: red;
+}
+
+#locCol {
+  float: right;
+  padding-right: 25%;
+  text-align: center;
+}
+
+#locTitle {
+
+}
+
+#resCol {
+  float: left;
+}
+
+
 
 #title {
   font-variant: small-caps;

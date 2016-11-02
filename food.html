@@ -7,6 +7,42 @@
   </head>
   <body>
     <h3>Places to <cite>get a meal</cite> in Seattle</h3>
+    <div class="mealMenu">
+      <nav class="mealNav">
+        <ul>
+          <li><h4><a>CHOOSE MEAL TYPE<a id="here"> HERE</a></a></h4>
+            <ul class="mealChoice">
+              <!-- breakfast hover displays locations -->
+              <li id="breakfast">
+                <a href="breakfastPlaces.html">Breakfast</a>
+                <div class="box">
+                  <iframe src="breakfastPlaces.html" width = "500px" height = "350px"></iframe>
+                </div>
+              </li>
+              <!-- breakfast hover display ends -->
+
+              <!-- lunch hover displays locations -->
+              <li id="lunch">
+                <a href="lunchPlaces.html">Lunch</a>
+                <div class="box">
+                  <iframe src="lunchPlaces.html" width = "500px" height = "350px"></iframe>
+                </div>
+              </li>
+              <!-- lunch hover display ends -->
+
+              <!-- dinner hover displays locations -->
+              <li id="dinner">
+                <a href="dinnerPlaces.html">Dinner</a>
+                <div class="box">
+                  <iframe src="dinnerPlaces.html" width = "500px" height = "350px"></iframe>
+                </div>
+              </li>
+              <!-- dinner hover display ends -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div id="map"></div>
     <table id="foodLocations"></table>
     <footer>
@@ -22,45 +58,10 @@
 
 <body>
   <!-- flashy message on top Get a Meal -->
-  <h3>Places to <cite>get a meal</cite> in Seattle</h3>
+  <!-- <h3>Places to <cite>get a meal</cite> in Seattle</h3> -->
 
   <!-- choose meal type: Breakfast Lunch Dinner -->
-  <div class="mealMenu">
-    <nav class="mealNav">
-      <ul>
-        <li><h4><a>CHOOSE MEAL TYPE<a id="here"> HERE</a></a></h4>
-          <ul class="mealChoice">
-            <!-- breakfast hover displays locations -->
-            <li id="breakfast">
-              <a href="breakfastPlaces.html">Breakfast</a>
-              <div class="box">
-                <iframe src="breakfastPlaces.html" width = "500px" height = "350px"></iframe>
-              </div>
-            </li>
-            <!-- breakfast hover display ends -->
 
-            <!-- lunch hover displays locations -->
-            <li id="lunch">
-              <a href="lunchPlaces.html">Lunch</a>
-              <div class="box">
-                <iframe src="lunchPlaces.html" width = "500px" height = "350px"></iframe>
-              </div>
-            </li>
-            <!-- lunch hover display ends -->
-
-            <!-- dinner hover displays locations -->
-            <li id="dinner">
-              <a href="dinnerPlaces.html">Dinner</a>
-              <div class="box">
-                <iframe src="dinnerPlaces.html" width = "500px" height = "350px"></iframe>
-              </div>
-            </li>
-            <!-- dinner hover display ends -->
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
   <!-- ^ choose meal type ends ^ -->
 
 <!-- div that has the maps for locations -->
