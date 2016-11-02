@@ -121,3 +121,16 @@ function newLocationButtonClick() {
 };
 
 document.getElementById('newLocation').addEventListener('click', newLocationButtonClick);
+
+//saving for testing
+var d=new Date();
+var h=d.getHours();
+h;
+if(h<=16 && h>=14)
+{
+alert(h);
+}
+else{
+alert(d);
+}
+undefined
