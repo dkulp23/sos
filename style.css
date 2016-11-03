@@ -85,7 +85,6 @@ cite{
 #here {
   color: red;
 }
-
 .mealMenu {
   animation-duration: 2s;
   animation-name: slidein;
@@ -130,8 +129,8 @@ a:hover + .box,.box:hover{
 }
 /* end code to display preview of meal type locations */
 
-#map {
+/*#map {
   width: 500px;
   height: 300px;
   margin: 0 auto;
-}
+}*/
