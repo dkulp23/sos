@@ -21,4 +21,4 @@ page 3 (reservations page): input name, contact info, date, time.
 Waffle for issues
 Slack for Instant Messaging.
 
-SODA API endpoing: https://data.seattle.gov/resource/vawf-4au3.json
+Colors: (dark to light) (#9f7e69 #d2bba0 #f2efc7 #f7ffe0 #ffeee2)
