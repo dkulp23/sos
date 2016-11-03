@@ -1,5 +1,5 @@
 body {
-  animation: pulse 5s infinite;
+  /*animation: pulse 5s infinite;
 
 
   }
@@ -7,10 +7,10 @@ body {
   @keyframes pulse
    {
      0%   {background: #66ffff;}
-     25%  {background: #ffffcc;}
-     50%  {background: #ffcc66;}
-     75%  {background: #99ff99;}
-     100% {background: #cc66ff;}
+     25%  {background: #ffffcc;}*/
+     background: #ffcc66;
+     /*75%  {background: #99ff99;}
+     100% {background: #cc66ff;}*/
 }
 .circle {
    border-radius: 200%;
@@ -40,6 +40,8 @@ body {
 }
 
 #food {
+  display: block;
+  border-radius: 20px;
   padding: 5px;
 }
 
