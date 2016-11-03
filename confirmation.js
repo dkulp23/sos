@@ -1,21 +1,10 @@
 'use strict';
 
-var nameEl = document.getElementById('nom');
-var ageEl = document.getElementById('anos');
-var genderEl = document.getElementById('genero');
-var genderTextEl = document.getElementById('genderText');
-var phoneEl = document.getElementById('telefono');
-var emailEl = document.getElementById('correo');
-var dateEl = document.getElementById('fecha');
-var partyEl = document.getElementById('personas');
-var petsEl = document.getElementById('mascotas');
-var notesEl = document.getElementById('notas');
-var formSubmitEl = document.getElementById('formSubmit');
+var yourName = document.getElementById('yourName');
+var locationEl = document.getElementById('location');
 
 var thisReservation = JSON.parse(localStorage.getItem('thisReservation'));
 
-
-var locTitleEl = document.getElementById('locTitle');
 var thisName = thisReservation.name;
 var thisHood = thisReservation.hood;
 var thisAddress = thisReservation.address;
@@ -25,13 +14,6 @@ var thisDaysArray = thisReservation.daysOpen;
 
 var openTime;
 var closeTime;
-
-nameEl.setAttribute('placeholder', 'What\'s your name?');
-ageEl.setAttribute('placeholder', 'How old are you?');
-genderTextEl.setAttribute('placeholder', 'Gender identity?');
-phoneEl.setAttribute('placeholder', 'Where can we reach you?')
-emailEl.setAttribute('placeholder', 'Where can we reach you?')
-partyEl.setAttribute('placeholder', 'Including yourself!');
 
 function addOpenSuffix() {
   if (thisOpenTime < 12) {
@@ -67,7 +49,7 @@ function printLocation() {
 
   var locNameEl = document.createElement('p');
   locNameEl.textContent = thisName;
-  locTitleEl.appendChild(locNameEl);
+  locationEl.appendChild(locNameEl);
 
   var locHoodEl = document.createElement('p');
   locHoodEl.textContent = thisHood;
@@ -94,6 +76,3 @@ function printLocation() {
 }
 
 printLocation();
-
-
-// TODO if everything is good, [action="confirmation.js" method="get"]

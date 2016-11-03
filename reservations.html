@@ -9,10 +9,10 @@
   </head>
 
   <body>
-    <h1 id="title">Make a Reservation!</h1>
+    <h1 id="title">Make a Reservation</h1>
 
     <div id="resCol">
-      <form id="resForm">
+      <form id="resForm" action="confirmation.html" method="post">
         <fieldset>
 
           <h3><label for="name">Name: </label>
@@ -44,7 +44,7 @@
           <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h3>
             <textarea name="notes" rows="5" cols="50" id="notas" class="input"></textarea><br><br>
 
-          <button id="formSubmit" value="Submit">Submit Reservation</button>
+          <button id="formSubmit" type="submit" value="Submit">Submit Reservation</button>
 
         </fieldset>
       </form>
