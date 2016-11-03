@@ -1,58 +1,25 @@
-body {
-  animation: pulse 5s infinite;
-
-
-  }
-
-  @keyframes pulse
-   {
-     0%   {background: #66ffff;}
-     25%  {background: #ffffcc;}
-     50%  {background: #ffcc66;}
-     75%  {background: #99ff99;}
-     100% {background: #cc66ff;}
-}
-.circle {
-   border-radius: 200%;
-   width:100px; height:100px;
-   margin-top:180px; transform-origin:200% center;
-   position:absolute; animation:rotate 10s linear infinite;
- }
-.circle:before {
-    content:'SOS';font-size: 55px;
-    border-radius: 200%;
-    position: absolute;
-    height:100px; width:100%;
-    background: radial-gradient(circle at 400px 200px, #5cabff, red);
-    animation:rotate 10s linear reverse infinite; }
-@keyframes rotate { 100% { transform:rotate(360deg); } }
-
-/*body {
-  font-family: Helvetica;
-  font-size: 17px;
-  background: #f0f8f7;
-}*/
-
 .button {
   border: 5px solid black;
   width: 150px;
   height: 150px;
 }
 
-#food {
-  padding: 5px;
+.hidden {
+  display: none;
 }
 
-#foodLocations td,th{
-  border: 1px solid black;
-  padding: 0.3em;
-  background-color: #99ff99;
-  font-size: 16px;
+#mealSelection {
+  
+}
+
+#foodTable td,th{
+border: 1px solid black;
+padding: 0.3em;
+background-color: #99ff99;
+font-size: 16px;
 }
 h3{
-  font-family: "Ar Berkley";
-  animation-duration: 10s;
-  font-size: 20px;
+  animation-duration: 3s;
   animation-name: slidein;
 }
 @keyframes slidein {
@@ -74,61 +41,6 @@ cite{
 @-webkit-keyframes blinker {
   50% { opacity: 0; }
 }
-
-#map {
-  width: 500px;
-  height: 300px;
-  margin: 0 auto;
-}
-
-/* Meal dropdown menu code start */
-#here {
-  color: red;
-}
-
-.mealMenu {
-  animation-duration: 2s;
-  animation-name: slidein;
-  text-decoration: underline;
-}
-
-.mealNav ul li{
-  position: relative;
-  list-style-type: none;
-  width: 255px;
-  text-align: left;
-}
-/*list of meal types below*/
-.mealChoice {
-  display: none;
-  position: relative;
-  background-color: #82d5f5;
-  border: 1px dotted #f0f8f7;
-  text-align: left;
-  margin: auto;
-  margin-left: 10px;
-}
-
-.mealMenu ul li:hover ul {
-  display:block;
-  width: 510px;
-  -webkit-box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
-  -moz-box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
-  box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
-}
-/* Meal dropdown menu end ^ */
-
-/* start code to display preview of meal type locations */
-.box{
-  display: none;
-  width: 100%;
-}
-a:hover + .box,.box:hover{
-  display: block;
-  position: relative;
-  z-index: 100;
-}
-/* end code to display preview of meal type locations */
 
 #map {
   width: 500px;

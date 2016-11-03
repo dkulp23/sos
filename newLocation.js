@@ -1,6 +1,7 @@
 'use strict';
 
 function newLocationFormSubmit(event) {
+  event.preventDefault();
   var name = event.target.name.value;
   var hood = event.target.hood.value;
   var address = event.target.address.value;
@@ -18,6 +19,7 @@ function newLocationFormSubmit(event) {
     'restrictions' : restrictions,
   };
   localStorage.setItem('newLocation', JSON.stringify(newLocationObject));
+  location.href = 'newLocationConfirm.js';
 };
 
 form.addEventListener('submit', newLocationFormSubmit);
