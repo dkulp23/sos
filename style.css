@@ -9,7 +9,7 @@
 }
 
 #mealSelection {
-  
+
 }
 
 #foodTable td,th{
@@ -47,3 +47,57 @@ cite{
   height: 300px;
   margin: 0 auto;
 }
+
+/* Meal dropdown menu code start */
+#here {
+  color: red;
+}
+.mealMenu {
+  animation-duration: 2s;
+  animation-name: slidein;
+  text-decoration: underline;
+}
+
+.mealNav ul li{
+  position: relative;
+  list-style-type: none;
+  width: 255px;
+  text-align: left;
+}
+/*list of meal types below*/
+.mealChoice {
+  display: none;
+  position: relative;
+  background-color: #82d5f5;
+  border: 1px dotted #f0f8f7;
+  text-align: left;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.mealMenu ul li:hover ul {
+  display:block;
+  width: 510px;
+  -webkit-box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
+  -moz-box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
+  box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
+}
+/* Meal dropdown menu end ^ */
+
+/* start code to display preview of meal type locations */
+.box{
+  display: none;
+  width: 100%;
+}
+a:hover + .box,.box:hover{
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+/* end code to display preview of meal type locations */
+
+/*#map {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+}*/
