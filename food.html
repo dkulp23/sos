@@ -7,18 +7,39 @@
   </head>
   <body>
     <h3>Places to <cite>get a meal</cite> in Seattle</h3>
-    <form id="mealSelection">
-      <input type="radio" name="meal" value="breakfast"/> Breakfast
-      <input type="radio" name="meal" value="lunch"/> Lunch
-      <input type="radio" name="meal" value="dinner"> Dinner
-    </form>
+    <div id="tableFilters">
+      <form id="mealSelection" class="filterForm">
+        <fieldset>
+          <input type="radio" name="meal" value="breakfast"/> Breakfast
+          <input type="radio" name="meal" value="lunch"/> Lunch
+          <input type="radio" name="meal" value="dinner"> Dinner
+        </fieldset>
+      </form>
+      <form id="hoodSelection" class="filterForm">
+        <fieldset>
+          <p>Want to see just one neighborhood?</p>
+          <select class="hoodDropBox" name="hoods">
+            <option value="Downtown">Downtown</option>
+            <option value="Belltown">Belltown</option>
+            <option value="Pioneer Square">Pioneer Square</option>
+            <option value="Capitol Hill">Capitol Hill</option>
+            <option value="First Hill">First Hill</option>
+            <option value="SLU">South Lake Union</option>
+            <option value="U District">U District</option>
+            <option value="Uptown">Uptown</option>
+            <option value="Greenlake">Green Lake</option>
+            <option value="SODO">SODO</option>
+          </select>
+        </fieldset>
+      </form>
+    </div>
     <div id="map"></div>
     <table id="foodTable">
       <thead id="foodHeaderRow">
-        <th>Location Name</th>
+        <!-- <th>Location Name</th>
         <th>Neighborhood</th>
         <th>Address(click for map)</th>
-        <th>Requirements</th>
+        <th>Requirements</th> -->
       </thead>
     </table>
     <footer class="footer">

@@ -1,3 +1,7 @@
+fieldset {
+  border-radius: 3px;
+}
+
 .button {
   border: 5px solid black;
   width: 150px;
@@ -8,9 +12,26 @@
   display: none;
 }
 
-#food {
-
+.filterForm {
+  width: 300px;
 }
+
+#tableFilters {
+  width: 100%;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#mealSelection {
+  float: left;
+  margin-left: 100px;
+}
+
+#hoodSelection {
+  float: right;
+  margin-right: 100px;
+}
+
 #foodTable td,th{
 border: 1px solid black;
 padding: 0.3em;

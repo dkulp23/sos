@@ -1,6 +1,19 @@
 'use strict';
 var allLocations = [ ];
 
+var hoods = [
+  'Downtown',
+  'Belltown',
+  'Pioneer Square',
+  'Capitol Hill',
+  'First Hill',
+  'SLU',
+  'U District',
+  'Uptown',
+  'Greenlake',
+  'SODO'
+];
+
 //Object constructor for locations
 var Location = function(obj) {
   this.name = obj.name;
@@ -71,6 +84,14 @@ function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4, tC5) {
 
 //loop to create table with object instances in allLocations array
 function populateTable() {
+  var tableEl = document.getElementById('foodTable');
+  tableEl.innerHTML = ' ';
+  var rowEl = document.createElement('tr');
+  makeAnElementWithText('th', 'Location Name', rowEl);
+  makeAnElementWithText('th', 'Neighborhood', rowEl);
+  makeAnElementWithText('th', 'Address (Click for map)', rowEl);
+  makeAnElementWithText('th', 'Requirements', rowEl);
+  tableEl.appendChild(rowEl);
   for (var i = 0; i < allLocations.length; i++) {
     createRow('foodTable', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions, allLocations[i].mealType);
   }
@@ -78,7 +99,7 @@ function populateTable() {
 
 populateTable();
 
-function filterTheMealsList(event) {
+function filterTheTableByMeal(event) {
   populateTable();
   makeReservationEventListeners();
   var tableEl = document.getElementById('foodTable');
@@ -95,11 +116,37 @@ function filterTheMealsList(event) {
 function eventListenerForMealSelection() {
   var radioForm = document.getElementsByName('meal');
   for (var i = 0; i < radioForm.length; i++) {
-    radioForm[i].addEventListener('change', filterTheMealsList);
+    radioForm[i].addEventListener('change', filterTheTableByMeal);
   }
 };
 
 eventListenerForMealSelection();
+
+function filterTheTableByHood(event) {
+  populateTable();
+  makeReservationEventListeners();
+  var tableEl = document.getElementById('foodTable');
+  var tableCells = tableEl.getElementsByTagName('td');
+  for (var i = 0; i < tableCells.length; i++) {
+    for (var j = 0; j < hoods.length; j++) {
+      if (tableCells[i].textContent === hoods[j]) {
+        if (tableCells[i].textContent !== event.target.value) {
+          console.log(tableCells[i].textContent);
+          console.log(event.target.value);
+          console.log(hoods[j]);
+          tableCells[i].parentNode.setAttribute('class', 'hidden');
+        }
+      }
+    };
+  };
+};
+
+function eventListenerForHoodSelection() {
+  var dropDownList = document.getElementsByName('hoods');
+  dropDownList[0].addEventListener('change', filterTheTableByHood);
+};
+
+eventListenerForHoodSelection();
 
 function reservationForm(event) {
   var reservationClick = event.target.id;
