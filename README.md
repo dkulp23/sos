@@ -20,3 +20,5 @@ page 3 (reservations page): input name, contact info, date, time.
 ##Project Management strategy and tools
 Waffle for issues
 Slack for Instant Messaging.
+
+SODA API endpoing: https://data.seattle.gov/resource/vawf-4au3.json

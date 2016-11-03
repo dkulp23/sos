@@ -6,10 +6,13 @@ function $(selector) {
 
 function completeTheForm() {
   var newLocation = JSON.parse(localStorage.getItem('newLocation'));
-  var nameEl = $('#name');
-  nameEl.textContent = newLocation.name;
-  var hoodEl = $('#hood');
-  hoodEl.textContent = newLocation.hood;
+  $('#name').textContent = 'Location: ' + newLocation.name;
+  $('#hood').textContent = 'Neighborhood: ' + newLocation.hood;
+  $('#address').textContent = 'Street address: ' + newLocation.address;
+  $('#days').textContent = 'Open days: ' + newLocation.days;
+  $('#openTime').textContent = 'Opens at: ' + newLocation.openTime;
+  $('#closeTime').textContent = 'Closes at: ' + newLocation.closeTime;
+  $('#restrictions').textContent = 'Requirements for service: ' + newLocation.restrictions;
 }
 
 completeTheForm();

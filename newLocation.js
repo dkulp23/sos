@@ -19,7 +19,7 @@ function newLocationFormSubmit(event) {
     'restrictions' : restrictions,
   };
   localStorage.setItem('newLocation', JSON.stringify(newLocationObject));
-  location.href = 'newLocationConfirm.js';
+  location.href = 'newLocationConfirm.html';
 };
 
 form.addEventListener('submit', newLocationFormSubmit);
