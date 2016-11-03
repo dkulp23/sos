@@ -12,7 +12,20 @@
         <h3><label>Location<input type="text" name="name" class="input inputText" placeholder="Name of the location..."/></label></h3>
         <h3><label>Neighborhood<input type="text" name="hood" class="input inputText" placeholder="Downtown / Capitol Hill..."/></label></h3>
         <h3><label>Address<input type="text" name="address" class="input inputText" placeholder="123 Main St., Seattle"/></label></h3>
-        <h3><label>Which days is it open?<input type="text" class="input inputText" name="days" placeholder="Monday = 1, Tuesday = 2..."/></label></h3>
+        <h3>
+          <label>Which days is it open?
+            <br />
+            <p>
+              <input type="checkbox" name="days" value="1">Monday
+              <input type="checkbox" name="days" value="2">Tuesday
+              <input type="checkbox" name="days" value="3">Wednesday
+              <input type="checkbox" name="days" value="4">Thursday
+              <input type="checkbox" name="days" value="5">Friday
+              <input type="checkbox" name="days" value="6">Saturday
+              <input type="checkbox" name="days" value="7">Sunday
+            </p>
+          </label>
+        </h3>
         <h3><label>What time does it open?<input type="number" name="openTime" class="input" placeholder="0-24hr | 4pm = 16"/></label></h3>
         <h3><label>What time does it close?<input type="number" name="closeTime" class="input" placeholder="0-24hr | 6pm = 18"/></label></h3>
         <h3><label>Any requirements for service?<input type="text" class="input inputText" name="restrictions" placeholder="Youth? Seniors? Women only?"/></label></h3>
