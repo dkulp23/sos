@@ -1,6 +1,7 @@
 'use strict';
 
 function mapMarker(event) {
+  googleMap();
   var address = event.target.textContent;
   var mapGeo = new google.maps.Geocoder();
   for(var i = 0; i < allLocations.length; i++) {
