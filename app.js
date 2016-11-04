@@ -47,6 +47,20 @@ function googleMap() {
   });
 };
 
+// start filtering meal type locations IF CLICKED. saving for now just in case
+// var breakfast = document.getElementById("breakfast");
+// var lunch = document.getElementById("lunch");
+// var dinner = document.getElementById("dinner");
+
+//display all Breakfast locations when clicked
+// function clickBreakfast(event) {
+//   for(var i = 0; i < breakfastLocationData.length; i++) {
+//     alert(breakfastLocationData[i].name);
+//   }
+// }
+// breakfast.addEventListener("click", clickBreakfast);
+// ^ end filtering click event for meal types ^
+
 //helper function to create table elements
 function makeAnElementWithText(element, textContent, parent) {
   var childEl = document.createElement(element);
@@ -151,14 +165,18 @@ eventListenerForHoodSelection();
 function reservationForm(event) {
   var reservationClick = event.target.id;
   var reservedLocation = [];
+  var thisLocation;
   for (var i = 0; i < allLocations.length; i++) {
     if (reservationClick === allLocations[i].name) {
       allLocations[i].reservations += 1;
       reservedLocation.push(allLocations[i]);
+      thisLocation = allLocations[i];
     }
   };
   localStorage.setItem('reservation', JSON.stringify(reservedLocation));
   localStorage.setItem('allLocations', JSON.stringify(allLocations));
+  localStorage.setItem('thisReservation', '');
+  localStorage.setItem('thisReservation', JSON.stringify(thisLocation));
   window.location.assign('reservations.html');
 };
 
@@ -173,3 +191,10 @@ makeReservationEventListeners();
 // function addLocationButtonClick(event) {
 //
 // }
+addEventListeners();
+
+function newLocationButtonClick() {
+  window.location.assign('newLocation.html');
+};
+
+document.getElementById('newLocation').addEventListener('click', newLocationButtonClick);

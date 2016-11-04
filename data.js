@@ -33,5 +33,4 @@ var dinnerLocationData = [
   {'name': 'Friday Feasts ROOTS', 'hood': 'U District', 'address': '1415 NE 43rd St, Seattle', 'meal': 'dinner', 'days': [5], 'openTime': 18, 'closeTime': 19, 'restrictions': 'none'}, //7
   {'name': 'Phinney Neighbor', 'hood': 'Association', 'hood': 'Greenlake', 'address': '5515 Phinney Ave N, Seattle', 'meal': 'dinner', 'days': [2], 'openTime': 17, 'closeTime': 18, 'restrictions': 'none'}, //8
   {'name': 'Saint Martin de Porres Shelter', 'hood': 'SODO', 'address': '1561 Alaskan Way S, Seattle', 'meal': 'dinner', 'days': [1, 2, 3, 4, 5, 6, 7], 'openTime': 18, 'closeTime': 22, 'restrictions': 'men 55+'}, //9
-  // {'name': ' ', 'hood': ' ', 'address': ' ', 'days': [1, 2, 3, 4, 5, 6, 7], 'openTime': 17, 'closeTime': 19, 'restrictions': ' '}, //10
 ];
