@@ -34,7 +34,7 @@ function instantiateLocations() {
     new Location(lunchLocationData[i]);
     new Location(dinnerLocationData[i]);
   }
-}
+};
 
 instantiateLocations();
 
@@ -100,7 +100,7 @@ function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4, tC5) {
 function populateTable() {
   var tableEl = document.getElementById('foodTable');
   tableEl.innerHTML = ' ';
-  var rowEl = document.createElement('tr');
+  var rowEl = document.createElement('thead');
   makeAnElementWithText('th', 'Location Name', rowEl);
   makeAnElementWithText('th', 'Neighborhood', rowEl);
   makeAnElementWithText('th', 'Address (Click for map)', rowEl);
