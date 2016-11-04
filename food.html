@@ -3,48 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Food</title>
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Work+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css"></link>
   </head>
   <body>
-    <h3>Places to <cite>get a meal</cite> in Seattle</h3>
-    <div class="mealMenu">
-      <nav class="mealNav">
-        <ul>
-          <li><h4><a>CHOOSE MEAL TYPE<a id="here"> HERE</a></a></h4>
-            <ul class="mealChoice">
-              <!-- breakfast hover displays locations -->
-              <li id="breakfast">
-                <a href="breakfastPlaces.html">Breakfast</a>
-                <div class="box">
-                  <iframe src="breakfastPlaces.html" width = "500px" height = "350px"></iframe>
-                </div>
-              </li>
-              <!-- breakfast hover display ends -->
-
-              <!-- lunch hover displays locations -->
-              <li id="lunch">
-                <a href="lunchPlaces.html">Lunch</a>
-                <div class="box">
-                  <iframe src="lunchPlaces.html" width = "500px" height = "350px"></iframe>
-                </div>
-              </li>
-              <!-- lunch hover display ends -->
-
-              <!-- dinner hover displays locations -->
-              <li id="dinner">
-                <a href="dinnerPlaces.html">Dinner</a>
-                <div class="box">
-                  <iframe src="dinnerPlaces.html" width = "500px" height = "350px"></iframe>
-                </div>
-              </li>
-              <!-- dinner hover display ends -->
-            </ul>
-          </li>
-        </ul>
-      </nav>
+    <div id="filtersAndMap">
+      <h1 id="banner">Places to <cite>get a meal</cite> in Seattle</h3>
+      <aside id="tableFilters">
+        <form id="mealSelection" class="filterForm">
+          <fieldset>
+            <input type="radio" name="meal" value="breakfast"/> Breakfast
+            <input type="radio" name="meal" value="lunch"/> Lunch
+            <input type="radio" name="meal" value="dinner"> Dinner
+          </fieldset>
+        </form>
+        <form id="hoodSelection" class="filterForm">
+          <fieldset>
+            <p>Want to see just one neighborhood?</p>
+            <select class="hoodDropBox" name="hoods">
+              <option value="Downtown">Downtown</option>
+              <option value="Belltown">Belltown</option>
+              <option value="Pioneer Square">Pioneer Square</option>
+              <option value="Capitol Hill">Capitol Hill</option>
+              <option value="First Hill">First Hill</option>
+              <option value="SLU">South Lake Union</option>
+              <option value="U District">U District</option>
+              <option value="Uptown">Uptown</option>
+              <option value="Greenlake">Green Lake</option>
+              <option value="SODO">SODO</option>
+            </select>
+          </fieldset>
+        </form>
+      </aside>
+      <div id="map"></div>
     </div>
-    <div id="map"></div>
-    <table id="foodLocations"></table>
+    <table id="foodTable">
+    </table>
     <footer>
       <div class="newLocationButton">
         <button type="button" name="addNewLocation" id="newLocation">Suggest a Location</button>
