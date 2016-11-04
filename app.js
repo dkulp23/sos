@@ -67,14 +67,18 @@ function makeAReservationButton(idName, parent) {
   parent.appendChild(buttonEl);
   //get something that will refer to data.js for the hours as we did for .names
   //display hour property for current time for user
-  var hour = new Date().getHours();//assigns curent time HR
-  hour;
-      if(hour >= allLocations[3].openTime && hour <= allLocations[3].closeTime){ //range of time open to close
-        buttonEl.style.backgroundColor = 'green'; //clear if place is open
-      }else{
-        buttonEl.style.backgroundColor = 'red'; //red if place is closed
-      }
-    };
+
+  for (var j = 0; j< allLocations.length; j++) {
+
+    var hour = new Date().getHours();//assigns curent time HR
+
+    if(hour >= allLocations[j].openTime && hour <= allLocations[j].closeTime){ //range of time open to close
+      buttonEl.style.backgroundColor = 'yellow'; //clear if place is open
+    }else{
+      buttonEl.style.backgroundColor = 'red'; //red if place is closed
+    }
+  }
+};
 
 //helper function to create table rows
 function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
