@@ -65,16 +65,16 @@ function makeAReservationButton(idName, parent) {
   buttonEl.setAttribute('id', idName);
   buttonEl.textContent = 'Make a Reservation';
   parent.appendChild(buttonEl);
-//get something that will refer to data.js for the hours as we did for .names
+  //get something that will refer to data.js for the hours as we did for .names
   //display hour property for current time for user
   var hour = new Date().getHours();//assigns curent time HR
   hour;
-  if(hour <= 19 && hour >= 14) //range of time open to close
-  {
-    buttonEl.style.backgroundColor = 'transparent'; //clear if place is open
-  }
-  else{
-    buttonEl.style.backgroundColor = 'red'; //red if place is closed
+  for (i = 0; i <= allLocations.length; i++){
+    if(hour >= allLocations[i].openTime && hour <= allLocations[i].closeTime){ //range of time open to close
+      buttonEl.style.backgroundColor = 'transparent'; //clear if place is open
+    }else{
+      buttonEl.style.backgroundColor = 'red'; //red if place is closed
+    }
   }
 
 };
