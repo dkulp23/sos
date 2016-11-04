@@ -60,7 +60,7 @@ function setClassOfAddressCells(element, textContent, parent) {
 };
 
 //helper function to create reservation button
-function makeAReservationButton(idName, parent) {
+function makeAReservationButton(idName, parent, shopHours) {
   var buttonEl = document.createElement('button');
   buttonEl.setAttribute('id', idName);
   buttonEl.textContent = 'Make a Reservation';
@@ -68,20 +68,21 @@ function makeAReservationButton(idName, parent) {
   //get something that will refer to data.js for the hours as we did for .names
   //display hour property for current time for user
 
-  for (var j = 0; j< allLocations.length; j++) {
+  // for (var j = 0; j < allLocations.length; j++) {
 
     var hour = new Date().getHours();//assigns curent time HR
-
+// console.log(hour);
     if(hour >= allLocations[j].openTime && hour <= allLocations[j].closeTime){ //range of time open to close
-      buttonEl.style.backgroundColor = 'yellow'; //clear if place is open
-    }else{
+      buttonEl.style.backgroundColor = 'green'; //clear if place is open
+    }else{ //remember to set attribute and change colour in CSS
       buttonEl.style.backgroundColor = 'red'; //red if place is closed
+
     }
-  }
+  // }
 };
 
 //helper function to create table rows
-function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
+function createRow(idName, rowElement, El, obj, tC1, tC2, tC3, tC4) {
   var tableEl = document.getElementById(idName);
   var rowEl = document.createElement(rowElement);
   makeAnElementWithText(El, tC1, rowEl);
@@ -95,7 +96,7 @@ function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
 //loop to create table with object instances in allLocations array
 function populateTable() {
   for (var i = 0; i < allLocations.length; i++) {
-    createRow('foodLocations', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions);
+    createRow('foodLocations', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions, a);
   }
 };
 
