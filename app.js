@@ -69,15 +69,12 @@ function makeAReservationButton(idName, parent) {
   //display hour property for current time for user
   var hour = new Date().getHours();//assigns curent time HR
   hour;
-  for (i = 0; i <= allLocations.length; i++){
-    if(hour >= allLocations[i].openTime && hour <= allLocations[i].closeTime){ //range of time open to close
-      buttonEl.style.backgroundColor = 'transparent'; //clear if place is open
-    }else{
-      buttonEl.style.backgroundColor = 'red'; //red if place is closed
-    }
-  }
-
-};
+      if(hour >= allLocations[3].openTime && hour <= allLocations[3].closeTime){ //range of time open to close
+        buttonEl.style.backgroundColor = 'green'; //clear if place is open
+      }else{
+        buttonEl.style.backgroundColor = 'red'; //red if place is closed
+      }
+    };
 
 //helper function to create table rows
 function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
