@@ -1,21 +1,44 @@
-/*p {
-  display: inline;
-}*/
+p {
+  text-indent: 20px;
+}
+
+text {
+  text-indent: 20px;
+}
 
 #confirmation {
-
+  display: flex;
 }
 
 #left {
   float: left;
-  display: inline-block;
-  margin: 0;
-  display: flex;
+  /*display: inline-block;*/
+  /*margin: 0;*/
+  /*display: flex;*/
+  border: 1px solid black;
+  padding: 3%;
+  margin-right: 3%;
 }
 
 #right {
+  float: inherit;
+  /*display: inline-block;*/
+  /*margin: 0;*/
+  border: 1px solid black;
+  padding: 3%;
+  margin-left: 3%;
+  /*flex-grow: 0.5;*/
+}
+
+#moreRight {
   float: right;
-  display: inline-block;
-  margin: 0;
-  flex-grow: 0.5;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#myRes {
+  font-size: 15pt;
+  font-weight: bold;
+  border-radius: 25%;
+  
 }

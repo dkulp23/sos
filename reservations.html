@@ -32,7 +32,7 @@
 
           <h3><label for="email">Email: </label><input type="text" name="email" id="correo" class="input inputText"></h3>
 
-          <h3><label for="date">Date of stay: </label>
+          <h3><label for="date">Date of reservation: </label>
             <input type="date" name="date" id="fecha" class="input"><strong class="imp"> *</strong></h3>
 
           <h3><label for="party">How many people? </label>
@@ -44,7 +44,7 @@
           <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h3>
             <textarea name="notes" rows="5" cols="50" id="notas" class="input"></textarea><br><br>
 
-          <button id="formSubmit" type="submit" value="Submit">Submit Reservation</button>
+          <button id="formSubmit" type="submit" value="Submit" onclick="submitInfo();">Submit Reservation</button>
 
         </fieldset>
       </form>

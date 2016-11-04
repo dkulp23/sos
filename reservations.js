@@ -13,9 +13,6 @@ var notesEl = document.getElementById('notas');
 var formSubmitEl = document.getElementById('formSubmit');
 var locColEl = document.getElementById('locCol');
 
-localStorage.setItem('yourName', nameEl.value);
-localStorage.setItem('yourParty', partyEl.value);
-localStorage.setItem('resDate', dateEl.value);
 
 var thisReservation = JSON.parse(localStorage.getItem('thisReservation'));
 
@@ -29,11 +26,14 @@ var thisDaysArray = thisReservation.daysOpen;
 var openTime;
 var closeTime;
 
+var resArray = [];
+localStorage.setItem('yourResz', resArray);
+
 nameEl.setAttribute('placeholder', 'What\'s your name?');
 ageEl.setAttribute('placeholder', 'How old are you?');
 genderTextEl.setAttribute('placeholder', 'Gender identity?');
-phoneEl.setAttribute('placeholder', 'Where can we reach you?')
-emailEl.setAttribute('placeholder', 'Where can we reach you?')
+phoneEl.setAttribute('placeholder', 'Where can we reach you?');
+emailEl.setAttribute('placeholder', 'Where can we reach you?');
 partyEl.setAttribute('placeholder', 'Including yourself!');
 
 function addOpenSuffix() {
@@ -102,5 +102,15 @@ function printLocation() {
 
 printLocation();
 
+function submitInfo() {
+  localStorage.setItem('yourName', nameEl.value);
+  localStorage.setItem('yourParty', partyEl.value);
+  localStorage.setItem('resDate', dateEl.value);
 
-// TODO if everything is good, [action="confirmation.js" method="get"]
+  var localRes = JSON.parse(localStorage.getItem('yourResz'));
+  console.log(localRes);
+  localRes.push(thisReservation);
+  console.log(localRes);
+  localStorage.setItem('yourResz', JSON.stringify(localRes));
+
+}

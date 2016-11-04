@@ -1,17 +1,15 @@
 'use strict';
 
-console.log(localStorage.yourName);
-console.log(localStorage.yourParty);
-console.log(localStorage.resDate);
-
-
 var leftEl = document.getElementById('left');
 var rightEl = document.getElementById('right');
 
-var thisReservation = localStorage.getItem('thisReservation');
-var resName = JSON.parse(localStorage.getItem('yourName'));
-var resParty = JSON.parse(localStorage.getItem('yourParty'));
-var resDate = JSON.parse(localStorage.getItem('resDate'));
+var thisReservation = JSON.parse(localStorage.getItem('thisReservation'));
+
+var resName = localStorage.getItem('yourName');
+
+var resParty = localStorage.getItem('yourParty');
+
+var resDate = localStorage.getItem('resDate');
 
 var thisName = thisReservation.name;
 var thisHood = thisReservation.hood;
@@ -55,6 +53,8 @@ function addCloseSuffix() {
 
 function printLocation() {
 
+  var breakEl = document.createElement('br');
+
   var yourNameEl = document.createElement('h4');
   yourNameEl.textContent = 'Your Name: ';
   leftEl.appendChild(yourNameEl);
@@ -63,13 +63,21 @@ function printLocation() {
   resNameEl.textContent = resName;
   leftEl.appendChild(resNameEl);
 
-//TODO append date
+  var yourDateEl = document.createElement('h4');
+  yourDateEl.textContent = 'Date of reservation: ';
+  leftEl.appendChild(yourDateEl);
+
+  var resDateEl = document.createElement('p');
+  resDateEl.textContent = resDate;
+  leftEl.appendChild(resDateEl);
 
   var yourPartyEl = document.createElement('h4');
   yourPartyEl.textContent = 'Number of People: ';
   leftEl.appendChild(yourPartyEl);
 
-
+  var resPartyEl = document.createElement('p');
+  resPartyEl.textContent = resParty;
+  leftEl.appendChild(resPartyEl);
 
   var locationEl = document.createElement('h4');
   locationEl.textContent = 'Location: ';
@@ -87,11 +95,8 @@ function printLocation() {
   locAddressEl.textContent = thisAddress;
   locHoodEl.appendChild(locAddressEl);
 
-
   addOpenSuffix();
   addCloseSuffix();
-
-
 
   var locTime = openTime + ' - ' + closeTime;
   var locTimeEl = document.createElement('p');
