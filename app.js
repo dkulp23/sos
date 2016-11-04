@@ -116,6 +116,7 @@ populateTable();
 function filterTheTableByMeal(event) {
   populateTable();
   makeReservationEventListeners();
+  showAddressMarker();
   var tableEl = document.getElementById('foodTable');
   var tableCells = tableEl.getElementsByTagName('td');
   for (var i = 0; i < tableCells.length; i++) {
@@ -139,15 +140,13 @@ eventListenerForMealSelection();
 function filterTheTableByHood(event) {
   populateTable();
   makeReservationEventListeners();
+  showAddressMarker();
   var tableEl = document.getElementById('foodTable');
   var tableCells = tableEl.getElementsByTagName('td');
   for (var i = 0; i < tableCells.length; i++) {
     for (var j = 0; j < hoods.length; j++) {
       if (tableCells[i].textContent === hoods[j]) {
         if (tableCells[i].textContent !== event.target.value) {
-          console.log(tableCells[i].textContent);
-          console.log(event.target.value);
-          console.log(hoods[j]);
           tableCells[i].parentNode.setAttribute('class', 'hidden');
         }
       }
@@ -187,11 +186,6 @@ function makeReservationEventListeners() {
 };
 
 makeReservationEventListeners();
-
-// function addLocationButtonClick(event) {
-//
-// }
-addEventListeners();
 
 function newLocationButtonClick() {
   window.location.assign('newLocation.html');
