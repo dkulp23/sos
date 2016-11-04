@@ -1,5 +1,6 @@
 body {
   background-color: #9f7e69;
+  font-family: 'Work Sans', sans-serif;
 }
 
 header {
@@ -35,4 +36,13 @@ main {
 #confirmationContainer {
   width: 80%;
   margin: 0 auto;
+}
+
+#form {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #ffeee2;
+  border-radius: 8px;
+  border: 2px solid #d2bba0;
+  margin-top: 40px;
 }
