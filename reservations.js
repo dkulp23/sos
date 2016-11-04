@@ -13,15 +13,9 @@ var notesEl = document.getElementById('notas');
 var formSubmitEl = document.getElementById('formSubmit');
 var locColEl = document.getElementById('locCol');
 
-// localStorage.setItem('yourName', JSON.stringify(nameEl.value));
-console.log(nameEl.value);
-console.log(localStorage.yourName);
-// localStorage.setItem('yourParty', JSON.stringify(partyEl.value));
-console.log(yourParty.value);
-console.log(localStorage.yourParty);
-// localStorage.setItem('resDate', dateEl.value);
-console.log(dateEl.value);
-console.log(localStorage.resDate);
+localStorage.setItem('yourName', nameEl.value);
+localStorage.setItem('yourParty', partyEl.value);
+localStorage.setItem('resDate', dateEl.value);
 
 var thisReservation = JSON.parse(localStorage.getItem('thisReservation'));
 
