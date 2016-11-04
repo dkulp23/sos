@@ -38,9 +38,16 @@ body {
   width: 300px;
 }
 
+#banner {
+  text-align: center;
+}
+
 #filtersAndMap {
-  width: 100%;
+  width: 80%;
   overflow: auto;
+  margin: 0 auto;
+  background-color: #d2bba0;
+  padding: 10px;
 }
 
 #tableFilters {
@@ -52,6 +59,11 @@ body {
   display: block;
   border-radius: 20px;
   padding: 5px;
+}
+
+#foodTable {
+  width: 90%;
+  margin: 0 auto;
 }
 
 #foodTable td,th{
@@ -80,7 +92,7 @@ h3{
 
 cite{
   text-align: center;
-  color:red;
+  color: #9f7e69;
   animation: blinker 1s linear infinite;
 }
 
@@ -91,7 +103,7 @@ cite{
 #map {
   width: 500px;
   height: 300px;
-  margin: 0 auto;
+  margin-right: 20px;
   margin-bottom: 20px;
   float: right;
 }
@@ -144,9 +156,3 @@ a:hover + .box,.box:hover{
   z-index: 100;
 }
 /* end code to display preview of meal type locations */
-
-/*#map {
-  width: 500px;
-  height: 300px;
-  margin: 0 auto;
-}*/
