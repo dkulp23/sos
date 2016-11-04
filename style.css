@@ -39,24 +39,28 @@ body {
   height: 150px;
 }
 
+.hidden {
+  display: none;
+}
+
 #food {
   display: block;
   border-radius: 20px;
   padding: 5px;
 }
 
-#foodLocations td,th{
-  border: 1px solid black;
-  padding: 0.3em;
-  background-color: #99ff99;
-  font-size: 16px;
+#foodTable td,th{
+border: 1px solid black;
+padding: 0.3em;
+background-color: #99ff99;
+font-size: 16px;
 }
+
 h3{
-  font-family: "Ar Berkley";
-  animation-duration: 10s;
-  font-size: 20px;
+  animation-duration: 3s;
   animation-name: slidein;
 }
+
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -68,11 +72,13 @@ h3{
     width: 100%;
   }
 }
+
 cite{
   text-align: center;
   color:red;
   animation: blinker 1s linear infinite;
 }
+
 @-webkit-keyframes blinker {
   50% { opacity: 0; }
 }
