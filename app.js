@@ -60,29 +60,24 @@ function setClassOfAddressCells(element, textContent, parent) {
 };
 
 //helper function to create reservation button
-function makeAReservationButton(idName, parent, shopHours) {
+function makeAReservationButton(idName, parent) {
   var buttonEl = document.createElement('button');
   buttonEl.setAttribute('id', idName);
   buttonEl.textContent = 'Make a Reservation';
   parent.appendChild(buttonEl);
-  //get something that will refer to data.js for the hours as we did for .names
-  //display hour property for current time for user
 
-  // for (var j = 0; j < allLocations.length; j++) {
-
-    var hour = new Date().getHours();//assigns curent time HR
+    var hour = new Date().getHours();
 // console.log(hour);
-    if(hour >= allLocations[j].openTime && hour <= allLocations[j].closeTime){ //range of time open to close
-      buttonEl.style.backgroundColor = 'green'; //clear if place is open
-    }else{ //remember to set attribute and change colour in CSS
-      buttonEl.style.backgroundColor = 'red'; //red if place is closed
+    if(hour >= allLocations.openTime && hour <= allLocations.closeTime){
+      buttonEl.style.backgroundColor = 'green';
+    }else{
+      buttonEl.style.backgroundColor = 'red';
+  }
 
-    }
-  // }
 };
 
 //helper function to create table rows
-function createRow(idName, rowElement, El, obj, tC1, tC2, tC3, tC4) {
+function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
   var tableEl = document.getElementById(idName);
   var rowEl = document.createElement(rowElement);
   makeAnElementWithText(El, tC1, rowEl);
@@ -96,7 +91,7 @@ function createRow(idName, rowElement, El, obj, tC1, tC2, tC3, tC4) {
 //loop to create table with object instances in allLocations array
 function populateTable() {
   for (var i = 0; i < allLocations.length; i++) {
-    createRow('foodLocations', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions, a);
+    createRow('foodLocations', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions);
   }
 };
 
