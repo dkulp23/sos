@@ -1,3 +1,17 @@
 #confirmation {
-  display: inline;
+
+}
+
+#left {
+  float: left;
+  display: inline-block;
+  margin: 0;
+  display: flex;
+}
+
+#right {
+  float: right;
+  display: inline-block;
+  margin: 0;
+  flex-grow: 0.5;
 }

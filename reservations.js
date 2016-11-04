@@ -11,11 +11,20 @@ var partyEl = document.getElementById('personas');
 var petsEl = document.getElementById('mascotas');
 var notesEl = document.getElementById('notas');
 var formSubmitEl = document.getElementById('formSubmit');
+var locColEl = document.getElementById('locCol');
+
+// localStorage.setItem('yourName', JSON.stringify(nameEl.value));
+console.log(nameEl.value);
+console.log(localStorage.yourName);
+// localStorage.setItem('yourParty', JSON.stringify(partyEl.value));
+console.log(yourParty.value);
+console.log(localStorage.yourParty);
+// localStorage.setItem('resDate', dateEl.value);
+console.log(dateEl.value);
+console.log(localStorage.resDate);
 
 var thisReservation = JSON.parse(localStorage.getItem('thisReservation'));
 
-
-var locTitleEl = document.getElementById('locTitle');
 var thisName = thisReservation.name;
 var thisHood = thisReservation.hood;
 var thisAddress = thisReservation.address;
@@ -65,9 +74,13 @@ function addCloseSuffix() {
 
 function printLocation() {
 
+  var locTitleEl = document.createElement('h3');
+  locTitleEl.textContent = 'This is the location you are making a reservation for:';
+  locColEl.appendChild(locTitleEl);
+
   var locNameEl = document.createElement('p');
   locNameEl.textContent = thisName;
-  locTitleEl.appendChild(locNameEl);
+  locColEl.appendChild(locNameEl);
 
   var locHoodEl = document.createElement('p');
   locHoodEl.textContent = thisHood;
@@ -77,9 +90,9 @@ function printLocation() {
   locAddressEl.textContent = thisAddress;
   locHoodEl.appendChild(locAddressEl);
 
-
   addOpenSuffix();
   addCloseSuffix();
+
   var locTime = openTime + ' - ' + closeTime;
   var locTimeEl = document.createElement('p');
   locTimeEl.textContent = 'Serving from ' + locTime;
