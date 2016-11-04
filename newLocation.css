@@ -1,0 +1,38 @@
+body {
+  background-color: #9f7e69;
+}
+
+header {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #ffeee2;
+  border-radius: 8px;
+  border: 2px solid #d2bba0;
+  margin-bottom: 20px;
+}
+
+nav {
+  margin-bottom: 10px;
+}
+
+main {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #ffeee2;
+  border-radius: 8px;
+  border: 2px solid #d2bba0;
+}
+
+.headerText {
+  text-align: center;
+}
+
+.mainPageLink {
+  text-decoration: none;
+  background-color: #d2bba0;
+}
+
+#confirmationContainer {
+  width: 80%;
+  margin: 0 auto;
+}

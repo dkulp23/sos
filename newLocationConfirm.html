@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>New Location Confirmation</title>
-    <link rel="stylesheet" href="reservations.css">
+    <link rel="stylesheet" href="newLocation.css">
   </head>
   <body>
     <header>
-      <h1>Thank you for your suggestion!</h1>
+      <h1 class="headerText">Thank you for your suggestion!</h1>
       <nav>
-        <div><a href="index.html">Back to the main page</a></div>
+        <div class="headerText"><a href="index.html" class="mainPageLink">Back to the main page</a></div>
       </nav>
     </header>
     <main>
-      <h3>The following information for <span id="locationName"> will be reviewed for addition to our database:</span></h3>
-      <p id="name"></p>
-      <p id="hood"></p>
-      <p id="address"></p>
-      <p id="days"></p>
-      <p id="openTime"></p>
-      <p id="closeTime"></p>
-      <p id="restrictions"></p>
+      <div id="confirmationContainer">
+        <h3>The following information for <span id="locationName"> will be reviewed for addition to our database:</span></h3>
+        <p id="name"></p>
+        <p id="hood"></p>
+        <p id="address"></p>
+        <p id="days"></p>
+        <p id="openTime"></p>
+        <p id="closeTime"></p>
+        <p id="restrictions"></p>
+      </div>
     </main>
     <script type="text/javascript" src="newLocationConfirm.js"></script>
   </body>
