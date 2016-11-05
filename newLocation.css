@@ -1,15 +1,19 @@
 body {
-  background-color: #9f7e69;
+  background-color: #A7CCED;
   font-family: 'Work Sans', sans-serif;
 }
 
 header {
   width: 50%;
   margin: 0 auto;
-  background-color: #ffeee2;
+  background-color: #7489A1;
   border-radius: 8px;
-  border: 2px solid #d2bba0;
+  border: 2px solid #304D6D;
   margin-bottom: 20px;
+}
+
+fieldset {
+  padding: 5px;
 }
 
 nav {
@@ -19,9 +23,10 @@ nav {
 main {
   width: 50%;
   margin: 0 auto;
-  background-color: #ffeee2;
+  background-color: #7489A1;
   border-radius: 8px;
-  border: 2px solid #d2bba0;
+  border: 2px solid #304D6D;
+  padding: 5px;
 }
 
 .headerText {
@@ -30,7 +35,7 @@ main {
 
 .mainPageLink {
   text-decoration: none;
-  background-color: #d2bba0;
+  background-color: #304D6D;
 }
 
 #confirmationContainer {
@@ -41,8 +46,8 @@ main {
 #form {
   width: 60%;
   margin: 0 auto;
-  background-color: #ffeee2;
+  background-color: #7489A1;
   border-radius: 8px;
-  border: 2px solid #d2bba0;
+  border: 2px solid #304D6D;
   margin-top: 40px;
 }
