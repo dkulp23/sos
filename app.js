@@ -1,4 +1,20 @@
 'use strict';
+
+//Object constructor for locations
+var Location = function(obj) {
+  this.name = obj.name;
+  this.hood = obj.hood;
+  this.address = obj.address;
+  this.mealType = obj.meal;
+  this.daysOpen = obj.days;
+  this.openTime = obj.openTime;
+  this.closeTime = obj.closeTime;
+  this.restrictions = obj.restrictions;
+  this.reservations = obj.reservations || 0;
+  allLocations.push(this);
+};
+
+
 var allLocations = [ ];
 
 var hoods = [
@@ -17,19 +33,6 @@ var hoods = [
 var timeNow = new Date();
 var hourNow = timeNow.getHours();
 
-//Object constructor for locations
-var Location = function(obj) {
-  this.name = obj.name;
-  this.hood = obj.hood;
-  this.address = obj.address;
-  this.mealType = obj.meal;
-  this.daysOpen = obj.days;
-  this.openTime = obj.openTime;
-  this.closeTime = obj.closeTime;
-  this.restrictions = obj.restrictions;
-  this.reservations = obj.reservations || 0;
-  allLocations.push(this);
-};
 
 function instantiateLocations() {
   for(var i = 0; i < breakfastLocationData.length; i++) {
@@ -50,21 +53,13 @@ function googleMap() {
   });
 };
 
-// start filtering meal type locations IF CLICKED. saving for now just in case
-// var breakfast = document.getElementById("breakfast");
-// var lunch = document.getElementById("lunch");
-// var dinner = document.getElementById("dinner");
+function makeAHeaderElement(cellClass, textContent, parent) {
+  var childEl = document.createElement('th');
+  childEl.setAttribute('class', cellClass);
+  childEl.textContent = textContent;
+  parent.appendChild(childEl);
+}
 
-//display all Breakfast locations when clicked
-// function clickBreakfast(event) {
-//   for(var i = 0; i < breakfastLocationData.length; i++) {
-//     alert(breakfastLocationData[i].name);
-//   }
-// }
-// breakfast.addEventListener("click", clickBreakfast);
-// ^ end filtering click event for meal types ^
-
-//helper function to create table elements
 function makeAnElementWithText(element, textContent, parent) {
   var childEl = document.createElement(element);
   childEl.textContent = textContent;
@@ -104,10 +99,10 @@ function populateTable() {
   var tableEl = document.getElementById('foodTable');
   tableEl.innerHTML = ' ';
   var rowEl = document.createElement('thead');
-  makeAnElementWithText('th', 'Location Name', rowEl);
-  makeAnElementWithText('th', 'Neighborhood', rowEl);
-  makeAnElementWithText('th', 'Address (Click for map)', rowEl);
-  makeAnElementWithText('th', 'Requirements', rowEl);
+  makeAHeaderElement('locationCells', 'Location Name', rowEl);
+  makeAHeaderElement('hoodCells', 'Neighborhood', rowEl);
+  makeAHeaderElement('addressCells', 'Address (Click for map)', rowEl);
+  makeAHeaderElement('requirementsCells', 'Requirements', rowEl);
   tableEl.appendChild(rowEl);
   for (var i = 0; i < allLocations.length; i++) {
     createRow('foodTable', 'tr', 'td', allLocations[i]);
@@ -151,7 +146,7 @@ function filterTheTableByHood(event) {
       if (tableCells[i].textContent === hoods[j]) {
         if (tableCells[i].textContent !== event.target.value) {
           tableCells[i].parentNode.setAttribute('class', 'hidden');
-        }
+        };
       }
     };
   };

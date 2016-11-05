@@ -110,5 +110,4 @@ function submitInfo() {
   var localRes = JSON.parse(localStorage.getItem('yourResz'));
   localRes.push(thisReservation);
   localStorage.setItem('yourResz', JSON.stringify(localRes));
-  localStorage.setItem('yourReservations', JSON.stringify(resArray));
 }

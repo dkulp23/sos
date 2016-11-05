@@ -1,3 +1,3 @@
 'use strict';
 
-var myReservation = JSON.parse(localStorage.getItem('yourResz'));
+var myReservations = JSON.parse(localStorage.getItem('yourReservations'));

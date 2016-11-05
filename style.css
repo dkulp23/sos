@@ -30,6 +30,22 @@ body {
   height: 150px;
 }
 
+.locationCells {
+  width: 300px;
+}
+
+.hoodCells {
+  width: 100px;
+}
+
+.addressCells {
+  width: 200px;
+}
+
+.requirementCells {
+  width: 300px;
+}
+
 .hidden {
   display: none;
 }
@@ -72,6 +88,8 @@ padding: 0.3em;
 background-color: #ffeee2;
 font-size: 16px;
 }
+
+
 h1,h2{
   @import 'https://fonts.googleapis.com/css?family=Coming+Soon|Work+Sans';
    font-family: 'Work Sans', sans-serif;
