@@ -3,19 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Food</title>
-    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Work+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="food.css"></link>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Copse|Gentium+Book+Basic|Julius+Sans+One|Neuton|Rock+Salt|Unica+One');
+    </style>
   </head>
   <body>
     <div id="filtersAndMap">
-      <h1 id="banner">Places to <cite>get a meal</cite> in Seattle</h3>
+      <h1 id="banner">Where to <cite>get a meal</cite> in Seattle</h3>
       <aside id="tableFilters">
         <form id="mealSelection" class="filterForm">
           <fieldset>
-            <input type="radio" name="meal" value="breakfast"/> Breakfast
-            <input type="radio" name="meal" value="lunch"/> Lunch
-            <input type="radio" name="meal" value="dinner"> Dinner
-          </fieldset>
+            <input type="radio" name="meal" value="breakfast"/> breakfast
+            <input type="radio" name="meal" value="lunch"/> lunch
+            <input type="radio" name="meal" value="dinner"> dinner
+          </fieldset><br>
         </form>
         <form id="hoodSelection" class="filterForm">
           <fieldset>
@@ -27,22 +29,25 @@
               <option value="Capitol Hill">Capitol Hill</option>
               <option value="First Hill">First Hill</option>
               <option value="SLU">South Lake Union</option>
-              <option value="U District">U District</option>
+              <option value="U District">U-District</option>
               <option value="Uptown">Uptown</option>
               <option value="Greenlake">Green Lake</option>
               <option value="SODO">SODO</option>
             </select>
           </fieldset>
-        </form>
+        </form><br><br>
+        <div class="newLocationButton">
+          <button type="button" name="addNewLocation" id="newLocation">Suggest a Location!</button>
+        </div>
       </aside>
       <div id="map"></div>
-    </div>
+    </div><br>
+
+
     <table id="foodTable">
     </table>
     <footer>
-      <div class="newLocationButton">
-        <button type="button" name="addNewLocation" id="newLocation">Suggest a Location</button>
-      </div>
+
     </footer>
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="app.js"></script>

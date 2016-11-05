@@ -103,8 +103,9 @@ function populateTable() {
   var rowEl = document.createElement('thead');
   makeAnElementWithText('th', 'Location Name', rowEl);
   makeAnElementWithText('th', 'Neighborhood', rowEl);
-  makeAnElementWithText('th', 'Address (Click for map)', rowEl);
+  makeAnElementWithText('th', 'Address', rowEl);
   makeAnElementWithText('th', 'Requirements', rowEl);
+  makeAnElementWithText('th', 'Meal', rowEl);
   tableEl.appendChild(rowEl);
   for (var i = 0; i < allLocations.length; i++) {
     createRow('foodTable', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions, allLocations[i].mealType);

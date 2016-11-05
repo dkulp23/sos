@@ -1,6 +1,37 @@
+body {
+  background-color: #82A0BC;
+  color: #1B1B1E;
+  font-family: 'Gentium Book Basic';
+  font-size: 17pt;
+}
+
+footer {
+  /*width: 150%;*/
+  /*padding-left: -5%;*/
+  /*height: 200%;*/
+  background-image: url(assets/working/png/skyline1.jpg);
+  background-size: 100% 100%;
+  /*background-repeat: no-repeat;*/
+
+}
+
+hr {
+  border-color: #1B1B1E;
+}
+
 p {
   text-indent: 20px;
+  font-size: 13pt;
 }
+
+h1 {
+  font-size: 30pt;
+}
+
+h3 {
+  font-size: 15pt;
+}
+
 
 text {
   text-indent: 20px;
@@ -16,8 +47,9 @@ text {
   /*margin: 0;*/
   /*display: flex;*/
   border: 1px solid black;
-  padding: 3%;
+  padding: 2%;
   margin-right: 3%;
+  margin-left: 3%;
 }
 
 #right {
@@ -25,7 +57,7 @@ text {
   /*display: inline-block;*/
   /*margin: 0;*/
   border: 1px solid black;
-  padding: 3%;
+  padding: 2%;
   margin-left: 3%;
   /*flex-grow: 0.5;*/
 }
@@ -40,5 +72,5 @@ text {
   font-size: 15pt;
   font-weight: bold;
   border-radius: 25%;
-  
+
 }
