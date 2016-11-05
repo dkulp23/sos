@@ -1,15 +1,15 @@
 'use strict';
 
-var nameEl = document.getElementById('nom');
-var ageEl = document.getElementById('anos');
-var genderEl = document.getElementById('genero');
+var nameEl = document.getElementById('Name');
+var ageEl = document.getElementById('Age');
+var genderEl = document.getElementById('Gender');
 var genderTextEl = document.getElementById('genderText');
-var phoneEl = document.getElementById('phone');
-var emailEl = document.getElementById('email');
-var dateEl = document.getElementById('date');
-var partyEl = document.getElementById('party');
-var petsEl = document.getElementById('mascotas');
-var notesEl = document.getElementById('notes');
+var phoneEl = document.getElementById('Phone');
+var emailEl = document.getElementById('Email');
+var dateEl = document.getElementById('Date');
+var partyEl = document.getElementById('Party');
+var petsEl = document.getElementById('Pets');
+var notesEl = document.getElementById('Notes');
 var formSubmitEl = document.getElementById('formSubmit');
 var locColEl = document.getElementById('locCol');
 
@@ -112,5 +112,4 @@ function submitInfo() {
   localRes.push(thisReservation);
   console.log(localRes);
   localStorage.setItem('yourResz', JSON.stringify(localRes));
-
 }

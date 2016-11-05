@@ -14,6 +14,7 @@ var hoods = [
   'SODO'
 ];
 
+
 //Object constructor for locations
 var Location = function(obj) {
   this.name = obj.name;
