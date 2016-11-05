@@ -1,18 +1,21 @@
 body {
-  background-color: #82A0BC;
+  background-color: #A7CCED;
   color: #1B1B1E;
   font-family: 'Gentium Book Basic';
   font-size: 17pt;
 }
 
-footer {
-  /*width: 150%;*/
-  /*padding-left: -5%;*/
-  /*height: 200%;*/
+body::after {
+  content: "";
   background-image: url(assets/working/png/skyline1.jpg);
   background-size: 100% 100%;
-  /*background-repeat: no-repeat;*/
-
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 hr {

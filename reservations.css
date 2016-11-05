@@ -4,6 +4,19 @@ body {
   font-family: 'Copse';
   }
 
+body::after {
+  content: "";
+  background-image: url(assets/working/png/skyline1.jpg);
+  background-size: 100% 100%;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 fieldset {
   display: inline-block;
   border: 2px solid #304D6D;
