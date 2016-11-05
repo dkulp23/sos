@@ -9,10 +9,10 @@
   </head>
 
   <body>
-    <h1 id="title">Make a Reservation!</h1>
+    <h1 id="title">Make a Reservation</h1>
 
     <div id="resCol">
-      <form id="resForm">
+      <form id="resForm" action="confirmation.html" method="post">
         <fieldset>
 
           <h3><label for="name">Name: </label>
@@ -32,8 +32,8 @@
 
           <h3><label for="email">Email: </label><input type="text" name="email" id="email" class="input inputText"></h3>
 
-          <h3><label for="date">Date of stay: </label>
-            <input type="date" name="date" id="date" class="input"><strong class="imp"> *</strong></h3>
+          <h3><label for="date">Date of reservation: </label>
+            <input type="date" name="date" id="fecha" class="input"><strong class="imp"> *</strong></h3>
 
           <h3><label for="party">How many people? </label>
             <input type="number" name="party" id="party" min="1" class="input"><strong class="imp"> *</strong></h3>
@@ -44,7 +44,7 @@
           <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h3>
             <textarea name="notes" rows="5" cols="50" id="notes" class="input"></textarea><br><br>
 
-          <button id="formSubmit" value="Submit">Submit Reservation</button>
+          <button id="formSubmit" type="submit" value="Submit" onclick="submitInfo();">Submit Reservation</button>
 
         </fieldset>
       </form>
@@ -52,7 +52,7 @@
 
 
     <div id="locCol">
-      <h3 id="locTitle">This is the location you are making a reservation for:</h3>
+
     </div>
 
 
