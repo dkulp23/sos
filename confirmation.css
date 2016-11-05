@@ -1,0 +1,79 @@
+body {
+  background-color: #A7CCED;
+  color: #1B1B1E;
+  font-family: 'Gentium Book Basic';
+  font-size: 17pt;
+}
+
+body::after {
+  content: "";
+  background-image: url(assets/working/png/skyline1.jpg);
+  background-size: 100% 100%;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+hr {
+  border-color: #1B1B1E;
+}
+
+p {
+  text-indent: 20px;
+  font-size: 13pt;
+}
+
+h1 {
+  font-size: 30pt;
+}
+
+h3 {
+  font-size: 15pt;
+}
+
+
+text {
+  text-indent: 20px;
+}
+
+#confirmation {
+  display: flex;
+}
+
+#left {
+  float: left;
+  /*display: inline-block;*/
+  /*margin: 0;*/
+  /*display: flex;*/
+  border: 1px solid black;
+  padding: 2%;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+#right {
+  float: inherit;
+  /*display: inline-block;*/
+  /*margin: 0;*/
+  border: 1px solid black;
+  padding: 2%;
+  margin-left: 3%;
+  /*flex-grow: 0.5;*/
+}
+
+#moreRight {
+  float: right;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#myRes {
+  font-size: 15pt;
+  font-weight: bold;
+  border-radius: 25%;
+
+}

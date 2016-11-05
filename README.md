@@ -17,6 +17,9 @@ with gender/age inputs.
 page 3 (reservations page): input name, contact info, date, time.
 ##Wire Frames
 ##User Stories
+
 ##Project Management strategy and tools
 Waffle for issues
 Slack for Instant Messaging.
+
+Colors: (dark to light) (#9f7e69 #d2bba0 #f2efc7 #f7ffe0 #ffeee2)

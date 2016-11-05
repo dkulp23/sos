@@ -1,0 +1,241 @@
+body {
+  /*background-color: transparent;*/
+  /*font-family: 'Work Sans', sans-serif;*/
+}
+
+body::after {
+  content: "";
+  background-image: url(assets/working/png/seattle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+fieldset {
+  /*border-radius: 3%;*/
+  border: 2px solid #545E75;
+}
+
+input {
+  vertical-align: top;
+}
+
+button {
+  background-color: #A9BCD0;
+  border: 2px solid #304D6D;
+  color: #304D6D;
+  border-radius: 15%;
+  font-weight: bold;
+  font-size: 10pt;
+  margin-top: 2%;
+}
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h2 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h3 {
+  font-family: 'Work Sans', sans-serif;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+cite {
+  text-align: center;
+  color: #304D6D;
+  animation: blinker 2s linear infinite;
+}
+
+/*thead {
+  font-weight: bold;
+}*/
+
+/*@keyframes rotate { 100% { transform:rotate(360deg); } }*/
+
+.button {
+  border: 5px solid black;
+  width: 150px;
+  height: 150px;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.filterForm {
+  width: 100%;
+  text-align: center;
+}
+
+.hoodDropBox {
+  font-size: 12pt;
+}
+
+.newLocationButton {
+  text-align: center;
+  align-items: center;
+}
+
+#newLocation {
+  font-size: 10pt;
+  font-variant: small-caps;
+}
+
+#banner {
+  text-align: center;
+  font-size: 35pt;
+}
+
+#foodButton {
+  float: right;
+  margin-right: 25%;
+}
+
+#foodCaption {
+  text-align: center;
+  margin-bottom: -10%;
+  font-family: 'Rock Salt';
+  font-size: 12pt;
+  margin-left: -3%;
+}
+
+#filtersAndMap {
+  width: 80%;
+  overflow: auto;
+  margin: 0 auto;
+  background-color: #82A0BC;
+  padding: 10px;
+}
+
+#tableFilters {
+  float: left;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+#food {
+  display: block;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+#foodTable {
+  width: 98%;
+  margin: 0 auto;
+}
+
+#foodTable th{
+  border: 5px solid #304D6D;
+  padding: 0.3em;
+  background-color: #A7CCED;
+  font-size: 19px;
+  font-variant: small-caps;
+  letter-spacing: 5px;
+}
+
+#foodTable td{
+  border: 1px solid #304D6D;
+  padding: 0.3em;
+  background-color: #A7CCED;
+  font-size: 16px;
+}
+
+#mealSelection {
+  font-size: 14pt;
+
+}
+
+#SOS {
+  text-align: center;
+  font-family: 'Unica One';
+  font-size: 60pt;
+  letter-spacing: 15px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 500%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+@-webkit-keyframes blinker {
+  70% { opacity: 0; }
+}
+
+#map {
+  border: 2px solid #304D6D;
+  width: 500px;
+  height: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: right;
+}
+
+/* Meal dropdown menu code start */
+#here {
+  color: red;
+}
+
+.mealMenu {
+  animation-duration: 2s;
+  animation-name: slidein;
+  text-decoration: underline;
+}
+
+.mealNav ul li{
+  position: relative;
+  list-style-type: none;
+  width: 255px;
+  text-align: left;
+}
+/*list of meal types below*/
+.mealChoice {
+  display: none;
+  position: relative;
+  background-color: #82d5f5;
+  border: 1px dotted #f0f8f7;
+  text-align: left;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.mealMenu ul li:hover ul {
+  display:block;
+  width: 510px;
+  -webkit-box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
+  -moz-box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
+  box-shadow: -11px 9px 31px -1px rgba(26,88,107,0.73);
+}
+/* Meal dropdown menu end ^ */
+
+/* start code to display preview of meal type locations */
+.box{
+  display: none;
+  width: 100%;
+}
+
+a:hover + .box,.box:hover{
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+/* end code to display preview of meal type locations */
