@@ -109,10 +109,12 @@ function submitInfo() {
   localStorage.setItem('yourParty', partyEl.value);
   localStorage.setItem('resDate', dateEl.value);
 
-  var localRes = JSON.parse(localStorage.getItem('yourResz'));
-  console.log(localRes);
-  localRes.push(thisReservation);
-  console.log(localRes);
-  localStorage.setItem('yourResz', JSON.stringify(localRes));
+  window.location.assign('confirmation.html');
+
+  // var localRes = JSON.parse(localStorage.getItem('yourResz'));
+  // console.log(localRes);
+  // localRes.push(thisReservation);
+  // console.log(localRes);
+  // localStorage.setItem('yourResz', JSON.stringify(localRes));
 
 }
