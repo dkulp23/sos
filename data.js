@@ -11,15 +11,15 @@ var breakfastLocationData = [
 ];
 //1 = Mon
 var lunchLocationData = [
-  {'name': 'Millionaire Club Charity lunch', 'hood': 'Belltown', 'address': '2515 Western Ave', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
-  {'name': 'YWCA Angeline\'s Meals lunch', 'hood': 'Belltown', 'address': '2030 3rd Ave', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 11, 'closeTime': 13, 'restrictions': 'Women 18+'},
-  {'name': 'Pike Market Senior Center lunch', 'hood': 'Downtown', 'address': '85 Pike St., #200', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 12, 'closeTime': 13, 'restrictions': 'Seniors 55+'},
-  {'name': 'Bible Study Outreach Ministries lunch', 'hood': 'Downtown', 'address': '6th Ave & Columbia St', 'meal': 'lunch', 'days': [6], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
+  {'name': 'Millionaire Club Charity Lunch', 'hood': 'Belltown', 'address': '2515 Western Ave', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
+  {'name': 'YWCA Angeline\'s Meals Lunch', 'hood': 'Belltown', 'address': '2030 3rd Ave', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 11, 'closeTime': 13, 'restrictions': 'Women 18+'},
+  {'name': 'Pike Market Senior Center Lunch', 'hood': 'Downtown', 'address': '85 Pike St., #200', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 12, 'closeTime': 13, 'restrictions': 'Seniors 55+'},
+  {'name': 'Bible Study Outreach Ministries Lunch', 'hood': 'Downtown', 'address': '6th Ave & Columbia St', 'meal': 'lunch', 'days': [6], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
   {'name': 'Operation Sack Lunch', 'hood': 'Downtown', 'address': '6th Ave & Columbia St', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5], 'openTime': 13, 'closeTime': 14, 'restrictions': 'none'},
-  {'name': 'Lazarus Day Center lunch', 'hood': 'Pioneer Square', 'address': '416 2nd Ave Ext S', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 12, 'closeTime': 13, 'restrictions': 'Seniors 50+'},
-  {'name': 'Union Gospel Mission lunch', 'hood': 'Pioneer Square', 'address': '318 2nd Ave Ext S', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 12, 'closeTime': 13, 'restrictions': 'Chapel service before lunch'},
-  {'name': 'Bread of Life Mission lunch', 'hood': 'Pioneer Square', 'address': '97 S Main', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
-  {'name': 'Peace for the Streets by Kids from the Streets lunch', 'hood': 'Capitol Hill', 'address': '1814 Summit Ave', 'meal': 'lunch', 'days': [2, 3, 4, 5], 'openTime': 11, 'closeTime': 13, 'restrictions': 'Youth under 21'},
+  {'name': 'Lazarus Day Center Lunch', 'hood': 'Pioneer Square', 'address': '416 2nd Ave Ext S', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 12, 'closeTime': 13, 'restrictions': 'Seniors 50+'},
+  {'name': 'Union Gospel Mission Lunch', 'hood': 'Pioneer Square', 'address': '318 2nd Ave Ext S', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5,6,7], 'openTime': 12, 'closeTime': 13, 'restrictions': 'Chapel service before lunch'},
+  {'name': 'Bread of Life Mission Lunch', 'hood': 'Pioneer Square', 'address': '97 S Main', 'meal': 'lunch', 'days': [1, 2, 3, 4, 5], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
+  {'name': 'Peace for the Streets by Kids from the Streets Lunch', 'hood': 'Capitol Hill', 'address': '1814 Summit Ave', 'meal': 'lunch', 'days': [2, 3, 4, 5], 'openTime': 11, 'closeTime': 13, 'restrictions': 'Youth under 21'},
   {'name': 'Community Lunch on Capitol Hill', 'hood': 'Capitol Hill', 'address': '1710 11th Ave,', 'meal': 'lunch', 'days': [2, 5], 'openTime': 12, 'closeTime': 13, 'restrictions': 'none'},
 ];
 
