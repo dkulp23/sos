@@ -87,15 +87,15 @@ function makeAReservationButton(idName, parent) {
 };
 
 //helper function to create table rows
-function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4, tC5) {
+function createRow(idName, rowElement, El, obj) {
   var tableEl = document.getElementById(idName);
   var rowEl = document.createElement(rowElement);
-  makeAnElementWithText(El, tC1, rowEl);
-  makeAnElementWithText(El, tC2, rowEl);
-  setClassOfAddressCells(El, tC3, rowEl);
-  makeAnElementWithText(El, tC4, rowEl);
-  makeAnElementWithText(El, tC5, rowEl);
-  makeAReservationButton(tC1, rowEl);
+  makeAnElementWithText(El, obj.name, rowEl);
+  makeAnElementWithText(El, obj.hood, rowEl);
+  setClassOfAddressCells(El, obj.address, rowEl);
+  makeAnElementWithText(El, obj.restrictions, rowEl);
+  makeAnElementWithText(El, obj.mealType, rowEl);
+  makeAReservationButton(obj.name, rowEl);
   tableEl.appendChild(rowEl);
 };
 
@@ -110,7 +110,7 @@ function populateTable() {
   makeAnElementWithText('th', 'Requirements', rowEl);
   tableEl.appendChild(rowEl);
   for (var i = 0; i < allLocations.length; i++) {
-    createRow('foodTable', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions, allLocations[i].mealType);
+    createRow('foodTable', 'tr', 'td', allLocations[i]);
   }
 };
 

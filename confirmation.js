@@ -31,7 +31,7 @@ function addOpenSuffix() {
     return openTime;
   }
   else if (thisOpenTime > 12) {
-      openTime = (thisOpenTime - 12) + 'pm';
+    openTime = (thisOpenTime - 12) + 'pm';
     return openTime;
   }
 }

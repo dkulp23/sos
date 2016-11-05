@@ -1,12 +1,12 @@
 'use strict';
 
-var nameEl = document.getElementById('nom');
-var ageEl = document.getElementById('anos');
-var genderEl = document.getElementById('genero');
+var nameEl = document.getElementById('name');
+var ageEl = document.getElementById('age');
+var genderEl = document.getElementsByName('gender');
 var genderTextEl = document.getElementById('genderText');
 var phoneEl = document.getElementById('phone');
 var emailEl = document.getElementById('email');
-var dateEl = document.getElementById('date');
+var dateEl = document.getElementById('fecha');
 var partyEl = document.getElementById('party');
 var petsEl = document.getElementById('mascotas');
 var notesEl = document.getElementById('notes');
@@ -27,7 +27,7 @@ var openTime;
 var closeTime;
 
 var resArray = [];
-localStorage.setItem('yourResz', resArray);
+localStorage.setItem('yourResz', JSON.stringify(resArray));
 
 nameEl.setAttribute('placeholder', 'What\'s your name?');
 ageEl.setAttribute('placeholder', 'How old are you?');
@@ -46,7 +46,7 @@ function addOpenSuffix() {
     return openTime;
   }
   else if (thisOpenTime > 12) {
-      openTime = (thisOpenTime - 12) + 'pm';
+    openTime = (thisOpenTime - 12) + 'pm';
     return openTime;
   }
 }
@@ -108,9 +108,7 @@ function submitInfo() {
   localStorage.setItem('resDate', dateEl.value);
 
   var localRes = JSON.parse(localStorage.getItem('yourResz'));
-  console.log(localRes);
   localRes.push(thisReservation);
-  console.log(localRes);
   localStorage.setItem('yourResz', JSON.stringify(localRes));
-
+  localStorage.setItem('yourReservations', JSON.stringify(resArray));
 }
