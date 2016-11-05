@@ -1,11 +1,49 @@
 body {
-  background: #66ffff;
+  background: #A7CCED;
+  /*margin-left: 5%;*/
+  font-family: 'Copse';
   }
 
-p {
-  font-size: 11pt;
-  font-weight: normal;
+body::after {
+  content: "";
+  background-image: url(assets/working/png/skyline1.jpg);
+  background-size: 100% 100%;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
 }
+
+fieldset {
+  display: inline-block;
+  border: 2px solid #304D6D;
+  padding: 10px;
+}
+
+h3 {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 13pt;
+}
+
+label {
+  /*font-size: 12pt;*/
+}
+
+p {
+  font-size: 14pt;
+  font-weight: 100;
+}
+
+/*.choice {
+  font-size: 5pt;
+}*/
 
 .imp {
   color: red;
@@ -18,6 +56,7 @@ p {
 .inputText {
   height: 14px;
   width: 150px;
+  float: right;
 }
 
 .placeholder {
@@ -32,27 +71,57 @@ p {
   color: red;
 }
 
+#buttonLine {
+  text-align: center;
+}
+
+#column1 {
+  padding: 13px;
+}
+
+#column2 {
+  /*margin-bottom: -10px;*/
+}
+
+#formSubmit {
+  align-items: center;
+  font-size: 13pt;
+  /*background-color:*/
+}
+
 #locCol {
   float: right;
   /*padding-right: 25%;*/
-  width: 70%;
+  width: 50%;
+  display: inline;
   /*height: 500%;*/
   text-align: center;
   /*vertical-align: middle;*/
   /*flex-grow: 1;*/
+  margin-top: 3%;
 }
 
 #locTitle {
 
 }
 
-#resCol {
+#resCol1 {
   float: left;
-  display: flex;
+  /*height: 50%;*/
+  /*display: inline;*/
+  /*display: flex;*/
+  margin-right: 2%;
 }
 
+#resCol2 {
 
+}
+
+#resForm {
+  /*width: 50%;*/
+}
 
 #title {
   font-variant: small-caps;
+  font-size: 40pt;
 }

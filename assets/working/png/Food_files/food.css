@@ -1,29 +1,6 @@
 body {
-  /*background-color: transparent;*/
-  /*font-family: 'Work Sans', sans-serif;*/
-}
-
-body::after {
-  content: "";
-  background-image: url(assets/working/png/seattle.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-fieldset {
-  /*border-radius: 3%;*/
-  border: 2px solid #545E75;
-}
-
-input {
-  vertical-align: top;
+  background-color: #545E75;
+  font-family: 'Copse';
 }
 
 button {
@@ -36,24 +13,13 @@ button {
   margin-top: 2%;
 }
 
-h1 {
-  font-family: 'Work Sans', sans-serif;
+fieldset {
+  /*border-radius: 3%;*/
+  border: 2px solid #545E75;
 }
 
-h2 {
-  font-family: 'Work Sans', sans-serif;
-}
-
-h3 {
-  font-family: 'Work Sans', sans-serif;
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-cite {
-  text-align: center;
-  color: #304D6D;
-  animation: blinker 2s linear infinite;
+input {
+  vertical-align: top;
 }
 
 /*thead {
@@ -96,19 +62,6 @@ cite {
 #banner {
   text-align: center;
   font-size: 35pt;
-}
-
-#foodButton {
-  float: right;
-  margin-right: 25%;
-}
-
-#foodCaption {
-  text-align: center;
-  margin-bottom: -10%;
-  font-family: 'Rock Salt';
-  font-size: 12pt;
-  margin-left: -3%;
 }
 
 #filtersAndMap {
@@ -159,9 +112,20 @@ cite {
 
 #SOS {
   text-align: center;
-  font-family: 'Unica One';
-  font-size: 60pt;
-  letter-spacing: 15px;
+}
+
+h1 {
+  /*font-family: 'Work Sans', sans-serif;*/
+}
+
+h2 {
+  /*font-family: 'Work Sans', sans-serif;*/
+}
+
+h3 {
+  /*font-family: 'Work Sans', sans-serif;*/
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
 @keyframes slidein {
@@ -176,9 +140,15 @@ cite {
   }
 }
 
+cite {
+  text-align: center;
+  color: #304D6D;
+  animation: blinker 2s linear infinite;
+  font-style: normal;
+}
 
 @-webkit-keyframes blinker {
-  70% { opacity: 0; }
+  50% { opacity: 0.5; }
 }
 
 #map {
