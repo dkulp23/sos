@@ -17,6 +17,7 @@ with gender/age inputs.
 page 3 (reservations page): input name, contact info, date, time.
 ##Wire Frames
 ##User Stories
+
 ##Project Management strategy and tools
 Waffle for issues
 Slack for Instant Messaging.
