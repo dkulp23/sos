@@ -14,6 +14,9 @@ var hoods = [
   'SODO'
 ];
 
+var timeNow = new Date();
+var hourNow = timeNow.getHours();
+
 //Object constructor for locations
 var Location = function(obj) {
   this.name = obj.name;
