@@ -1,20 +1,15 @@
 'use strict';
 
-var nameEl = document.getElementById('nom');
-var ageEl = document.getElementById('anos');
-var genderEl = document.getElementById('genero');
-var genderTextEl = document.getElementById('genderText');
-var phoneEl = document.getElementById('phone');
-var emailEl = document.getElementById('email');
-var dateEl = document.getElementById('date');
-var partyEl = document.getElementById('party');
-var petsEl = document.getElementById('mascotas');
-var notesEl = document.getElementById('notes');
-var formSubmitEl = document.getElementById('formSubmit');
-var locColEl = document.getElementById('locCol');
-
+var leftEl = document.getElementById('left');
+var rightEl = document.getElementById('right');
 
 var thisReservation = JSON.parse(localStorage.getItem('thisReservation'));
+
+var resName = localStorage.getItem('yourName');
+
+var resParty = localStorage.getItem('yourParty');
+
+var resDate = localStorage.getItem('resDate');
 
 var thisName = thisReservation.name;
 var thisHood = thisReservation.hood;
@@ -25,16 +20,6 @@ var thisDaysArray = thisReservation.daysOpen;
 
 var openTime;
 var closeTime;
-
-var resArray = [];
-localStorage.setItem('yourResz', resArray);
-
-nameEl.setAttribute('placeholder', 'What\'s your name?');
-ageEl.setAttribute('placeholder', 'How old are you?');
-genderTextEl.setAttribute('placeholder', 'Gender identity?');
-phoneEl.setAttribute('placeholder', 'Where can we reach you?');
-emailEl.setAttribute('placeholder', 'Where can we reach you?');
-partyEl.setAttribute('placeholder', 'Including yourself!');
 
 function addOpenSuffix() {
   if (thisOpenTime < 12) {
@@ -68,13 +53,39 @@ function addCloseSuffix() {
 
 function printLocation() {
 
-  var locTitleEl = document.createElement('h3');
-  locTitleEl.textContent = 'This is the location you are making a reservation for:';
-  locColEl.appendChild(locTitleEl);
+  var breakEl = document.createElement('br');
+
+  var yourNameEl = document.createElement('h4');
+  yourNameEl.textContent = 'Your Name: ';
+  leftEl.appendChild(yourNameEl);
+
+  var resNameEl = document.createElement('p');
+  resNameEl.textContent = resName;
+  leftEl.appendChild(resNameEl);
+
+  var yourDateEl = document.createElement('h4');
+  yourDateEl.textContent = 'Date of reservation: ';
+  leftEl.appendChild(yourDateEl);
+
+  var resDateEl = document.createElement('p');
+  resDateEl.textContent = resDate;
+  leftEl.appendChild(resDateEl);
+
+  var yourPartyEl = document.createElement('h4');
+  yourPartyEl.textContent = 'Number of People: ';
+  leftEl.appendChild(yourPartyEl);
+
+  var resPartyEl = document.createElement('p');
+  resPartyEl.textContent = resParty;
+  leftEl.appendChild(resPartyEl);
+
+  var locationEl = document.createElement('h4');
+  locationEl.textContent = 'Location: ';
+  rightEl.appendChild(locationEl);
 
   var locNameEl = document.createElement('p');
   locNameEl.textContent = thisName;
-  locColEl.appendChild(locNameEl);
+  rightEl.appendChild(locNameEl);
 
   var locHoodEl = document.createElement('p');
   locHoodEl.textContent = thisHood;
@@ -101,16 +112,3 @@ function printLocation() {
 }
 
 printLocation();
-
-function submitInfo() {
-  localStorage.setItem('yourName', nameEl.value);
-  localStorage.setItem('yourParty', partyEl.value);
-  localStorage.setItem('resDate', dateEl.value);
-
-  var localRes = JSON.parse(localStorage.getItem('yourResz'));
-  console.log(localRes);
-  localRes.push(thisReservation);
-  console.log(localRes);
-  localStorage.setItem('yourResz', JSON.stringify(localRes));
-
-}
