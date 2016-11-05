@@ -6,7 +6,7 @@ function mapMarker(event) {
   var mapGeo = new google.maps.Geocoder();
   for(var i = 0; i < allLocations.length; i++) {
     if(address === allLocations[i].address) {
-      mapGeo.geocode( { 'address': address}, function(results, status) {
+      mapGeo.geocode( { 'address': address + ', Seattle, WA'}, function(results, status) {
         if (status == 'OK') {
           // map.setCenter(results[0].geometry.location);
           new google.maps.Marker({

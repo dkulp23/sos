@@ -28,6 +28,10 @@ input {
 
 /*@keyframes rotate { 100% { transform:rotate(360deg); } }*/
 
+.address:hover {
+  cursor: pointer;
+}
+
 .button {
   border: 5px solid black;
   width: 150px;
