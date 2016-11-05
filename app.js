@@ -189,7 +189,7 @@ function makeReservationEventListeners() {
 makeReservationEventListeners();
 
 function newLocationButtonClick() {
-  window.location.assign('newLocation.html');
+  window.location.assign('dkulp23.github.io/newLocation.html');
 };
 
 document.getElementById('newLocation').addEventListener('click', newLocationButtonClick);
