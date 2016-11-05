@@ -3,6 +3,19 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 
+body::after {
+  content: "";
+  background-image: url(assets/working/png/skyline1.jpg);
+  background-size: 100% 100%;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 header {
   width: 50%;
   margin: 0 auto;
@@ -23,10 +36,9 @@ nav {
 main {
   width: 50%;
   margin: 0 auto;
-  background-color: #7489A1;
+  /*background-color: #7489A1;*/
   border-radius: 8px;
   border: 2px solid #304D6D;
-  padding: 5px;
 }
 
 .headerText {
@@ -35,7 +47,8 @@ main {
 
 .mainPageLink {
   text-decoration: none;
-  background-color: #304D6D;
+  color: #0A223C;
+  /*background-color: #304D6D;*/
 }
 
 #confirmationContainer {
@@ -46,8 +59,9 @@ main {
 #form {
   width: 60%;
   margin: 0 auto;
-  background-color: #7489A1;
+  /*background-color: #7489A1;*/
   border-radius: 8px;
   border: 2px solid #304D6D;
   margin-top: 40px;
+  padding: 10px;
 }
