@@ -1,23 +1,19 @@
-body {
-  animation: pulse 5s infinite;
-
-
-  }
-
-  @keyframes pulse
-   {
-     0%   {background: #66ffff;}
-     25%  {background: #ffffcc;}
-     50%  {background: #ffcc66;}
-     75%  {background: #99ff99;}
-     100% {background: #cc66ff;}
+fieldset {
+  border-radius: 3px;
 }
+
+body {
+  background-color: #9f7e69;
+  font-family: 'Work Sans', sans-serif;
+}
+
 .circle {
    border-radius: 200%;
    width:100px; height:100px;
    margin-top:180px; transform-origin:200% center;
    position:absolute; animation:rotate 10s linear infinite;
  }
+
 .circle:before {
     content:'SOS';font-size: 55px;
     border-radius: 200%;
@@ -25,13 +21,8 @@ body {
     height:100px; width:100%;
     background: radial-gradient(circle at 400px 200px, #5cabff, red);
     animation:rotate 10s linear reverse infinite; }
-@keyframes rotate { 100% { transform:rotate(360deg); } }
 
-/*body {
-  font-family: Helvetica;
-  font-size: 17px;
-  background: #f0f8f7;
-}*/
+@keyframes rotate { 100% { transform:rotate(360deg); } }
 
 .button {
   border: 5px solid black;
@@ -39,22 +30,58 @@ body {
   height: 150px;
 }
 
+.hidden {
+  display: none;
+}
+
+.filterForm {
+  width: 300px;
+}
+
+#banner {
+  text-align: center;
+}
+
+#filtersAndMap {
+  width: 80%;
+  overflow: auto;
+  margin: 0 auto;
+  background-color: #d2bba0;
+  padding: 10px;
+}
+
+#tableFilters {
+  float: left;
+  border-radius: 3px;
+}
+
 #food {
+  display: block;
+  border-radius: 20px;
   padding: 5px;
 }
 
-#foodLocations td,th{
-  border: 1px solid black;
-  padding: 0.3em;
-  background-color: #99ff99;
-  font-size: 16px;
+#foodTable {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#foodTable td,th{
+border: 1px solid #f2efc7;
+padding: 0.3em;
+background-color: #ffeee2;
+font-size: 16px;
+}
+h1,h2{
+  @import 'https://fonts.googleapis.com/css?family=Coming+Soon|Work+Sans';
+   font-family: 'Work Sans', sans-serif;
 }
 h3{
-  font-family: "Ar Berkley";
-  animation-duration: 10s;
-  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  animation-duration: 3s;
   animation-name: slidein;
 }
+
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -66,11 +93,13 @@ h3{
     width: 100%;
   }
 }
+
 cite{
   text-align: center;
-  color:red;
+  color: #9f7e69;
   animation: blinker 1s linear infinite;
 }
+
 @-webkit-keyframes blinker {
   50% { opacity: 0; }
 }
@@ -78,7 +107,9 @@ cite{
 #map {
   width: 500px;
   height: 300px;
-  margin: 0 auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: right;
 }
 
 /* Meal dropdown menu code start */
@@ -122,15 +153,10 @@ cite{
   display: none;
   width: 100%;
 }
+
 a:hover + .box,.box:hover{
   display: block;
   position: relative;
   z-index: 100;
 }
 /* end code to display preview of meal type locations */
-
-#map {
-  width: 500px;
-  height: 300px;
-  margin: 0 auto;
-}

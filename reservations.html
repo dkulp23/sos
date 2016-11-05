@@ -16,33 +16,38 @@
         <fieldset>
 
           <h3><label for="name">Name: </label>
-            <input type="text" name="name" id="nom" class="input inputText"><strong class="imp"> *</strong></h3>
+            <input type="text" name="name" id="name" class="input inputText"><strong class="imp"> *</strong></h3>
 
           <h3><label for="age">Age: </label>
-            <input type="number" name="age" id="anos" min="1" class="input inputText"><strong class="imp"> *</strong></h3>
+            <input type="number" name="age" id="age" min="1" class="input inputText"><strong class="imp"> *</strong></h3>
 
           <h3 id="genero"><label for="gender"> Gender:<strong class="imp"> *</strong></label></h3>
                           <input type="radio" name="gender" value="male" id="male" class="radio"><label for="male"> Male</label><br>
                           <input type="radio" name="gender" value="female" id="female"><label for="female"> Female</label><br>
                           <input type="radio" name="gender" value="otherGender" id="otherGender"><label for="otherGender"> Other </label><input type="text" name="whichGender" class="input inputText" id="genderText"><br>
 
-          <h3><label for="phone">Phone: </label></label><input type="text" name="phone" id="telefono" class="input inputText"></h3>
+          <h3><label for="phone">Phone: </label></label><input type="text" name="phone" id="phone" class="input inputText"></h3>
 
           &nbsp;<i>-AND/OR-</i><strong class="imp"> *</strong>
 
-          <h3><label for="email">Email: </label><input type="text" name="email" id="correo" class="input inputText"></h3>
+          <h3><label for="email">Email: </label><input type="text" name="email" id="email" class="input inputText"></h3>
 
+<<<<<<< HEAD
           <h3><label for="date">Date of reservation: </label>
             <input type="date" name="date" id="fecha" class="input"><strong class="imp"> *</strong></h3>
+=======
+          <h3><label for="date">Date of stay: </label>
+            <input type="date" name="date" id="date" class="input"><strong class="imp"> *</strong></h3>
+>>>>>>> 7a46e92fa48de3ae2ca191afd957a78e7dd64d61
 
           <h3><label for="party">How many people? </label>
-            <input type="number" name="party" id="personas" min="1" class="input"><strong class="imp"> *</strong></h3>
+            <input type="number" name="party" id="party" min="1" class="input"><strong class="imp"> *</strong></h3>
 
           <h3>Pets?</h3> <input type="radio" name="pets" id="mascotas" value="yes" class="radio"> Yes<br>
                         <input type="radio" name="pets" value-"no"> No<br>
 
           <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h3>
-            <textarea name="notes" rows="5" cols="50" id="notas" class="input"></textarea><br><br>
+            <textarea name="notes" rows="5" cols="50" id="notes" class="input"></textarea><br><br>
 
           <button id="formSubmit" type="submit" value="Submit" onclick="submitInfo();">Submit Reservation</button>
 

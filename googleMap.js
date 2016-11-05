@@ -1,6 +1,7 @@
 'use strict';
 
 function mapMarker(event) {
+  googleMap();
   var address = event.target.textContent;
   var mapGeo = new google.maps.Geocoder();
   for(var i = 0; i < allLocations.length; i++) {
@@ -22,7 +23,7 @@ function mapMarker(event) {
 
 function showAddressMarker() {
   var addressForMarker = document.querySelectorAll('.address');
-  for (var i = 0; i < allLocations.length; i++) {
+  for (var i = 0; i < addressForMarker.length; i++) {
     addressForMarker[i].addEventListener('click', mapMarker);
   }
 };

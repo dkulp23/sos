@@ -1,11 +1,25 @@
 'use strict';
 var allLocations = [ ];
 
+var hoods = [
+  'Downtown',
+  'Belltown',
+  'Pioneer Square',
+  'Capitol Hill',
+  'First Hill',
+  'SLU',
+  'U District',
+  'Uptown',
+  'Greenlake',
+  'SODO'
+];
+
 //Object constructor for locations
 var Location = function(obj) {
   this.name = obj.name;
   this.hood = obj.hood;
   this.address = obj.address;
+  this.mealType = obj.meal;
   this.daysOpen = obj.days;
   this.openTime = obj.openTime;
   this.closeTime = obj.closeTime;
@@ -20,7 +34,7 @@ function instantiateLocations() {
     new Location(lunchLocationData[i]);
     new Location(dinnerLocationData[i]);
   }
-}
+};
 
 instantiateLocations();
 
@@ -33,10 +47,10 @@ function googleMap() {
   });
 };
 
-// start filtering meal type locations when clicked
-var breakfast = document.getElementById("breakfast");
-var lunch = document.getElementById("lunch");
-var dinner = document.getElementById("dinner");
+// start filtering meal type locations IF CLICKED. saving for now just in case
+// var breakfast = document.getElementById("breakfast");
+// var lunch = document.getElementById("lunch");
+// var dinner = document.getElementById("dinner");
 
 //display all Breakfast locations when clicked
 // function clickBreakfast(event) {
@@ -70,25 +84,82 @@ function makeAReservationButton(idName, parent) {
 };
 
 //helper function to create table rows
-function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4) {
+function createRow(idName, rowElement, El, tC1, tC2, tC3, tC4, tC5) {
   var tableEl = document.getElementById(idName);
   var rowEl = document.createElement(rowElement);
   makeAnElementWithText(El, tC1, rowEl);
   makeAnElementWithText(El, tC2, rowEl);
   setClassOfAddressCells(El, tC3, rowEl);
   makeAnElementWithText(El, tC4, rowEl);
+  makeAnElementWithText(El, tC5, rowEl);
   makeAReservationButton(tC1, rowEl);
   tableEl.appendChild(rowEl);
 };
 
 //loop to create table with object instances in allLocations array
 function populateTable() {
+  var tableEl = document.getElementById('foodTable');
+  tableEl.innerHTML = ' ';
+  var rowEl = document.createElement('thead');
+  makeAnElementWithText('th', 'Location Name', rowEl);
+  makeAnElementWithText('th', 'Neighborhood', rowEl);
+  makeAnElementWithText('th', 'Address (Click for map)', rowEl);
+  makeAnElementWithText('th', 'Requirements', rowEl);
+  tableEl.appendChild(rowEl);
   for (var i = 0; i < allLocations.length; i++) {
-    createRow('foodLocations', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions);
+    createRow('foodTable', 'tr', 'td', allLocations[i].name, allLocations[i].hood, allLocations[i].address, allLocations[i].restrictions, allLocations[i].mealType);
   }
 };
 
 populateTable();
+
+function filterTheTableByMeal(event) {
+  populateTable();
+  makeReservationEventListeners();
+  showAddressMarker();
+  var tableEl = document.getElementById('foodTable');
+  var tableCells = tableEl.getElementsByTagName('td');
+  for (var i = 0; i < tableCells.length; i++) {
+    if (tableCells[i].textContent === 'breakfast' || tableCells[i].textContent === 'lunch' || tableCells[i].textContent === 'dinner') {
+      if (tableCells[i].textContent !== event.target.value) {
+        tableCells[i].parentNode.setAttribute('class', 'hidden');
+      }
+    }
+  };
+};
+
+function eventListenerForMealSelection() {
+  var radioForm = document.getElementsByName('meal');
+  for (var i = 0; i < radioForm.length; i++) {
+    radioForm[i].addEventListener('change', filterTheTableByMeal);
+  }
+};
+
+eventListenerForMealSelection();
+
+function filterTheTableByHood(event) {
+  populateTable();
+  makeReservationEventListeners();
+  showAddressMarker();
+  var tableEl = document.getElementById('foodTable');
+  var tableCells = tableEl.getElementsByTagName('td');
+  for (var i = 0; i < tableCells.length; i++) {
+    for (var j = 0; j < hoods.length; j++) {
+      if (tableCells[i].textContent === hoods[j]) {
+        if (tableCells[i].textContent !== event.target.value) {
+          tableCells[i].parentNode.setAttribute('class', 'hidden');
+        }
+      }
+    };
+  };
+};
+
+function eventListenerForHoodSelection() {
+  var dropDownList = document.getElementsByName('hoods');
+  dropDownList[0].addEventListener('change', filterTheTableByHood);
+};
+
+eventListenerForHoodSelection();
 
 function reservationForm(event) {
   var reservationClick = event.target.id;
@@ -108,13 +179,13 @@ function reservationForm(event) {
   window.location.assign('reservations.html');
 };
 
-function addEventListeners() {
+function makeReservationEventListeners() {
   for (var i = 0; i < allLocations.length; i++) {
     document.getElementById(allLocations[i].name).addEventListener('click', reservationForm);
   }
 };
 
-addEventListeners();
+makeReservationEventListeners();
 
 function newLocationButtonClick() {
   window.location.assign('newLocation.html');

@@ -4,12 +4,12 @@ var nameEl = document.getElementById('nom');
 var ageEl = document.getElementById('anos');
 var genderEl = document.getElementById('genero');
 var genderTextEl = document.getElementById('genderText');
-var phoneEl = document.getElementById('telefono');
-var emailEl = document.getElementById('correo');
-var dateEl = document.getElementById('fecha');
-var partyEl = document.getElementById('personas');
+var phoneEl = document.getElementById('phone');
+var emailEl = document.getElementById('email');
+var dateEl = document.getElementById('date');
+var partyEl = document.getElementById('party');
 var petsEl = document.getElementById('mascotas');
-var notesEl = document.getElementById('notas');
+var notesEl = document.getElementById('notes');
 var formSubmitEl = document.getElementById('formSubmit');
 var locColEl = document.getElementById('locCol');
 
