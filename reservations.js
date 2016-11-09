@@ -105,10 +105,11 @@ function printLocation() {
 printLocation();
 
 function submitInfo() {
+  window.preventDefault();
   localStorage.setItem('yourName', nameEl.value);
   localStorage.setItem('yourParty', partyEl.value);
   localStorage.setItem('resDate', dateEl.value);
-  location.href = 'confirmation.html';
+  window.location.assign('confirmation.html');
   ;
 
   // var localRes = JSON.parse(localStorage.getItem('yourResz'));
