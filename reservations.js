@@ -108,8 +108,8 @@ function submitInfo() {
   localStorage.setItem('yourName', nameEl.value);
   localStorage.setItem('yourParty', partyEl.value);
   localStorage.setItem('resDate', dateEl.value);
-
-  window.location.assign('confirmation.html');
+  location.href = 'confirmation.html';
+  ;
 
   // var localRes = JSON.parse(localStorage.getItem('yourResz'));
   // console.log(localRes);
