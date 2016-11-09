@@ -118,3 +118,5 @@ function submitInfo() {
   // localStorage.setItem('yourResz', JSON.stringify(localRes));
 
 }
+
+formSubmitEl.addEventListener('click', submitInfo);
