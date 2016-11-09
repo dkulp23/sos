@@ -1,7 +1,7 @@
 body {
   background: #A7CCED;
   /*margin-left: 5%;*/
-  font-family: 'Copse';
+  font-family: 'Copse', serif;
   }
 
 body::after {
