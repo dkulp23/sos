@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="reservations.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Copse|Gentium+Book+Basic|Julius+Sans+One|Neuton|Rock+Salt|Unica+One');
+    </style>
+    <title>Make a Reservation!</title>
+
+  </head>
+
+  <body>
+    <h1 id="title">Make a Reservation</h1>
+
+
+    <form id="resForm" action="confirmation.html" method="post">
+      <div id="resCol1">
+        <fieldset id="column1">
+
+          <h4><label for="name">Name: </label>
+            <input type="text" name="name" id="Name" class="input inputText" required><strong class="imp"> *</strong></h4>
+
+          <h4><label for="age">Age: </label>
+            <input type="number" name="age" id="Age" min="1" class="input inputText" required><strong class="imp"> *</strong></h4>
+
+          <h4 id="Gender"><label for="gender"> Gender:<strong class="imp"> *</strong></label></h4>
+              <input class="choice" type="radio" name="gender" value="male" id="Male" class="radio" required><label for="male"> Male</label><br>
+              <input class="choice" type="radio" name="gender" value="female" id="Female" required><label for="female"> Female</label><br>
+              <input class="choice" type="radio" name="gender" value="otherGender" id="OtherGender" required><label for="otherGender"> Other&nbsp; </label><input type="text" name="whichGender" class="input inputText" id="genderText"><br>
+
+          <h4><label for="phone">Phone: </label></label><input type="text" name="phone" id="Phone" class="input inputText"></h4>
+
+          &nbsp;<i>-AND/OR-</i><strong class="imp"> *</strong>
+
+          <h4><label for="email">Email: </label><input type="text" name="email" id="Email" class="input inputText"></h4>
+
+        </fieldset>
+      </div>
+
+      <div id="resCol2">
+        <fieldset id="column2">
+
+          <h4><label for="date">Date of reservation: </label>
+            <input type="date" name="date" id="Date" class="input" required><strong class="imp"> *</strong></h4>
+
+          <h4><label for="party">How many people? </label>
+            <input type="number" name="party" id="Party" min="1" class="input" required><strong class="imp"> *</strong></h4>
+
+          <h4>Pets?</h4>
+            <input class="choice" type="radio" name="pets" id="Pets" value="yes" class="radio"> Yes<br>
+            <input class="choice" type="radio" name="pets" value-"no"> No<br>
+
+          <h4><label for="notes">Anything else you'd like us to tell the shelter?</label></h4>
+            <textarea name="notes" rows="5" cols="50" id="Notes" class="input"></textarea><br><br>
+          <div id="buttonLine">
+            <button id="formSubmit" type="submit" value="Submit" onclick="submitInfo();">Submit Reservation</button>
+          </div>
+
+        </fieldset>
+      </form>
+
+
+      <div id="locCol"></div>
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="reservations.js"></script>
+  </body>
+
+</html>
