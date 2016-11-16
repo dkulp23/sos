@@ -22,12 +22,6 @@ input {
   vertical-align: top;
 }
 
-/*thead {
-  font-weight: bold;
-}*/
-
-/*@keyframes rotate { 100% { transform:rotate(360deg); } }*/
-
 .address:hover {
   cursor: pointer;
 }
@@ -116,43 +110,6 @@ input {
 
 #SOS {
   text-align: center;
-}
-
-h1 {
-  /*font-family: 'Work Sans', sans-serif;*/
-}
-
-h2 {
-  /*font-family: 'Work Sans', sans-serif;*/
-}
-
-h3 {
-  /*font-family: 'Work Sans', sans-serif;*/
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 500%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-cite {
-  text-align: center;
-  color: #304D6D;
-  animation: blinker 2s linear infinite;
-  font-style: normal;
-}
-
-@-webkit-keyframes blinker {
-  50% { opacity: 0.5; }
 }
 
 #map {
